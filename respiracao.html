@@ -1086,7 +1086,7 @@ function endRetention(){
   if(running) ticker=setInterval(wimTick,50);
 }
 
-function listenInstructions(){   if(!cur) return;   window.speechSynthesis.cancel();   const u = new SpeechSynthesisUtterance(cur.instructions);   u.lang = 'pt-BR';   u.rate = 0.88;   u.pitch = 1.0;   // Tenta usar voz Luciana (iOS) ou qualquer voz pt-BR disponível   const vozes = window.speechSynthesis.getVoices();   const voz = vozes.find(v => v.name.includes('Luciana'))            || vozes.find(v => v.lang === 'pt-BR')            || vozes.find(v => v.lang.startsWith('pt'));   if(voz) u.voice = voz;   window.speechSynthesis.speak(u); } rounds=Math.max(1,Math.min(99,rounds+d)); document.getElementById('rounds-val').textContent=rounds; }
+function listenInstructions(){   if(!cur) return;   window.speechSynthesis.cancel();   const u = new SpeechSynthesisUtterance(cur.instructions);   u.lang = 'pt-BR';   u.rate = 0.88;   u.pitch = 1.0;   // Tenta usar voz Luciana (iOS) ou qualquer voz pt-BR disponível   const vozes = window.speechSynthesis.getVoices();   const voz = vozes.find(v => v.name.includes('Luciana'))            || vozes.find(v => v.lang === 'pt-BR')            || vozes.find(v => v.lang.startsWith('pt'));   if(voz) u.voice = voz;   window.speechSynthesis.speak(u); }  function changeRounds(d){ rounds=Math.max(1,Math.min(99,rounds+d)); document.getElementById('rounds-val').textContent=rounds; }
 
 function showDone(){
   document.getElementById('timer-main').style.display='none';
