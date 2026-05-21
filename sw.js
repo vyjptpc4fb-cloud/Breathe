@@ -1,4 +1,4 @@
-const CACHE = 'respiracao-v1';
+const CACHE = 'respiracao-v2';
 const ASSETS = [
   './respiracao.html',
   './manifest.json',
