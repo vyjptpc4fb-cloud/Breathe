@@ -62,7 +62,6 @@
   }
 
   h1 { font-size: 1.9rem; font-weight: 300; letter-spacing: 0.05em; }
-
   .subtitle { font-style: italic; font-size: 0.95rem; color: var(--muted); margin-top: 4px; }
 
   .section-label {
@@ -172,7 +171,7 @@
   }
 
   .card-name { font-size: 1.4rem; font-weight: 400; line-height: 1.2; margin-bottom: 3px; }
-  .card-sub  { font-size: 0.95rem; font-style: italic; color: var(--muted); margin-bottom: 6px;}
+  .card-sub  { font-size: 0.95rem; font-style: italic; color: var(--muted); margin-bottom: 6px; }
   .card-effect { font-size: 1.05rem; color: var(--ink); line-height: 1.5; }
 
   .card-pattern { display: flex; gap: 5px; margin-top: 9px; flex-wrap: wrap; }
@@ -188,7 +187,6 @@
   }
 
   .wim-card-body { display: flex; gap: 14px; align-items: flex-start; }
-
   .wim-rounds-preview { flex: 0 0 auto; display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
 
   .wim-round-chip {
@@ -228,7 +226,7 @@
   }
 
   .timer-name { font-size: 2rem; font-weight: 300; text-align: center; margin-bottom: 3px; }
-  .timer-sub  { font-style: italic; font-size: 0.88rem; color: var(--muted); margin-bottom: 22px; text-align: center; }
+  .timer-sub  { font-style: italic; font-size: 0.88rem; color: var(--muted); margin-bottom: 16px; text-align: center; }
 
   .circle-wrap {
     position: relative;
@@ -277,7 +275,6 @@
   #count-display { font-size: 3.8rem; font-weight: 300; line-height: 1; letter-spacing: -0.02em; }
   #unit-label { font-size: 0.65rem; color: var(--muted); margin-top: 2px; font-family: 'Noto Sans JP', sans-serif; }
 
-  /* Wim Hof */
   #wim-dots { display: none; gap: 8px; margin-bottom: 14px; justify-content: center; }
   #wim-dots.show { display: flex; }
 
@@ -333,8 +330,21 @@
     font-size: 0.82rem;
     color: var(--muted);
     line-height: 1.6;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     font-style: italic;
+  }
+
+  .listen-btn {
+    margin-bottom: 14px;
+    background: transparent;
+    border: 1px solid rgba(42,32,22,0.25);
+    padding: 8px 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--muted);
+    border-radius: 2px;
+    cursor: pointer;
+    letter-spacing: 0.06em;
   }
 
   .rounds-row { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
@@ -407,8 +417,227 @@
   <p class="subtitle">manhãs, tradições orientais</p>
 </header>
 
+<!-- QUADRADA E VARIAÇÕES -->
+<div class="section-label"><span class="effect-dot dot-cool"></span> respiração quadrada · variações</div>
+<div class="cards-1">
+
+  <div class="card cool card-h" onclick="open_('taoist')">
+    <div class="card-left">
+      <div class="card-tag">China · Taoismo · Qi Gong</div>
+      <div class="card-name">Quadrada 4-4-4-4</div>
+      <div class="card-sub">Si Fang Hu Xi</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 4s</span><span class="phase-pill">ret. 4s</span><span class="phase-pill">expire 4s</span><span class="phase-pill">vazio 4s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Quatro fases iguais criam ritmo perfeito entre yin e yang. Harmoniza o qi, acalma o sistema nervoso, traz equanimidade. Base da meditação taoísta.</div>
+    </div>
+  </div>
+
+  <div class="card cool card-h" onclick="open_('quadrada6')">
+    <div class="card-left">
+      <div class="card-tag">China · Taoismo · Qi Gong</div>
+      <div class="card-name">Quadrada 6-6-6-6</div>
+      <div class="card-sub">Ritmo aprofundado</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 6s</span><span class="phase-pill">ret. 6s</span><span class="phase-pill">expire 6s</span><span class="phase-pill">vazio 6s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">A mesma estrutura quadrada com tempos mais longos. Aprofunda a atenção e o silêncio interno. Boa para quando a prática de 4s já está incorporada.</div>
+    </div>
+  </div>
+
+  <div class="card cool card-h" onclick="open_('quadrada8')">
+    <div class="card-left">
+      <div class="card-tag">China · Taoismo · Qi Gong</div>
+      <div class="card-name">Quadrada 8-8-8-8</div>
+      <div class="card-sub">Ritmo meditativo</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 8s</span><span class="phase-pill">ret. 8s</span><span class="phase-pill">expire 8s</span><span class="phase-pill">vazio 8s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Nível avançado. A retenção longa e o vazio prolongado criam estados de profunda quietude. Exige prática anterior com versões menores.</div>
+    </div>
+  </div>
+
+  <div class="card cool card-h" onclick="open_('quadrada10')">
+    <div class="card-left">
+      <div class="card-tag">China · Taoismo · Qi Gong</div>
+      <div class="card-name">Quadrada 10-10-10-10</div>
+      <div class="card-sub">Ritmo contemplativo</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 10s</span><span class="phase-pill">ret. 10s</span><span class="phase-pill">expire 10s</span><span class="phase-pill">vazio 10s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Prática contemplativa profunda. Cada ciclo dura 40 segundos. Só para quem já tem as versões anteriores bem estabelecidas no corpo.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CALMANTES -->
+<div class="section-label" style="margin-top:10px"><span class="effect-dot dot-cool"></span> calmante · equilíbrio · grounding</div>
+<div class="cards-1">
+
+  <div class="card cool card-h" onclick="open_('nadishodhana')">
+    <div class="card-left">
+      <div class="card-tag">Índia · Pranayama</div>
+      <div class="card-name">Nadi Shodhana</div>
+      <div class="card-sub">Narina Alternada</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire esq. 4s</span><span class="phase-pill">ret. 4s</span><span class="phase-pill">expire dir. 8s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Equilibra os hemisférios cerebrais e os canais sutil e físico. Clareza mental, calma profunda. Excelente para iniciar o dia com centramento pleno.</div>
+    </div>
+  </div>
+
+  <div class="card cool card-h" onclick="open_('tanden')">
+    <div class="card-left">
+      <div class="card-tag">Japão · Zen · Aikido</div>
+      <div class="card-name">Tanden Kokyu</div>
+      <div class="card-sub">Respiração do Hara</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 4s</span><span class="phase-pill">expire 6s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Dirige a respiração ao tanden — centro de força 3 dedos abaixo do umbigo. Enraizamento profundo, serenidade, estabilidade emocional.</div>
+    </div>
+  </div>
+
+  <div class="card cool card-h" onclick="open_('chandrabhedana')">
+    <div class="card-left">
+      <div class="card-tag">Índia · Pranayama</div>
+      <div class="card-name">Chandra Bhedana</div>
+      <div class="card-sub">Perfurando a Lua</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire esq. 4s</span><span class="phase-pill">ret. 4s</span><span class="phase-pill">expire dir. 8s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Ativa o canal lunar (ida nadi). Refresca o corpo, acalma a mente agitada. Antídoto para ansiedade e calor interno excessivo.</div>
+    </div>
+  </div>
+
+  <div class="card earth card-h" onclick="open_('nestor')">
+    <div class="card-left">
+      <div class="card-tag">James Nestor · Respire</div>
+      <div class="card-name">Respiração 5,5</div>
+      <div class="card-sub">O ritmo ideal</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 5,5s</span><span class="phase-pill">expire 5,5s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">O ritmo de 5,5 respirações por minuto é apontado por Nestor como o ideal para o ser humano — sincroniza coração, pulmões e sistema nervoso com precisão máxima.</div>
+    </div>
+  </div>
+
+  <div class="card earth card-h" onclick="open_('coherent')">
+    <div class="card-left">
+      <div class="card-tag">Respiração Coerente</div>
+      <div class="card-name">Coerência Cardíaca</div>
+      <div class="card-sub">5 respirações por minuto</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 5s</span><span class="phase-pill">expire 5s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">O ritmo de 5–6 respirações por minuto sincroniza coração, cérebro e sistema respiratório. Reduz ansiedade, estabiliza o humor. Pode ser feita em qualquer posição.</div>
+    </div>
+  </div>
+
+  <div class="card earth card-h" onclick="open_('478')">
+    <div class="card-left">
+      <div class="card-tag">Dr. Andrew Weil</div>
+      <div class="card-name">Respiração 4-7-8</div>
+      <div class="card-sub">Relaxante do Sistema Nervoso</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 4s</span><span class="phase-pill">ret. 7s</span><span class="phase-pill">expire 8s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">A longa retenção e a expiração prolongada ativam o nervo vago e o parassimpático. Reduz cortisol rapidamente. Excelente após despertar tenso ou ansioso.</div>
+    </div>
+  </div>
+
+  <div class="card earth card-h" onclick="open_('prolongada')">
+    <div class="card-left">
+      <div class="card-tag">Universal · Grounding</div>
+      <div class="card-name">Expiração Prolongada</div>
+      <div class="card-sub">Ativação Vagal</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 4s</span><span class="phase-pill">expire 8s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Expirar o dobro do tempo da inspiração aciona o nervo vago e desacelera o coração. Âncora imediata nos momentos de turbulência.</div>
+    </div>
+  </div>
+
+  <div class="card cool card-h" onclick="open_('anapana')">
+    <div class="card-left">
+      <div class="card-tag">Índia · Tailândia · Vipassana</div>
+      <div class="card-name">Anapanasati</div>
+      <div class="card-sub">Atenção plena ao sopro</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire natural</span><span class="phase-pill">expire natural</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">A técnica ensinada pelo Buda: apenas observar a respiração natural, sem controle. O timer marca o tempo total. Cultiva presença, desapego e equanimidade.</div>
+    </div>
+  </div>
+
+  <div class="card cool card-h" onclick="open_('sushumna')">
+    <div class="card-left">
+      <div class="card-tag">Índia · Tantra · Pranayama</div>
+      <div class="card-name">Canal Central</div>
+      <div class="card-sub">Sushumna Kriya</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 6s</span><span class="phase-pill">ret. 6s</span><span class="phase-pill">expire 6s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Visualize energia subindo pela coluna enquanto inspira, pousando no ápice na retenção, e descendo com serenidade na expiração. Integração corpo-mente.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- WIM HOF -->
+<div class="section-label" style="margin-top:10px"><span class="effect-dot dot-wim"></span> método wim hof · retenção progressiva</div>
+<div class="cards-1">
+  <div class="card wim" onclick="open_('wimhof')">
+    <div class="card-tag">Holanda · Método Wim Hof</div>
+    <div class="card-name">Respiração Wim Hof</div>
+    <div class="card-sub">Hiperventilação controlada + retenção crescente</div>
+    <div class="wim-card-body" style="margin-top:8px">
+      <div style="flex:1">
+        <div class="card-effect">30 respirações profundas rápidas, depois expire todo o ar e prenda — cada rodada a retenção cresce naturalmente. Ativa sistema nervoso, aumenta tolerância ao estresse.</div>
+        <div class="card-pattern" style="margin-top:10px">
+          <span class="phase-pill">30× inspire fundo</span>
+          <span class="phase-pill">retenção sem ar</span>
+          <span class="phase-pill">recuperação 15s</span>
+        </div>
+      </div>
+      <div class="wim-rounds-preview">
+        <div class="wim-round-chip">Rodada 1 · meta 1 min</div>
+        <div class="wim-round-chip">Rodada 2 · meta 1,5 min</div>
+        <div class="wim-round-chip">Rodada 3 · meta 2 min</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ENERGIZANTES -->
-<div class="section-label"><span class="effect-dot dot-warm"></span> energizante</div>
+<div class="section-label" style="margin-top:10px"><span class="effect-dot dot-warm"></span> energizante</div>
 <div class="cards-2">
   <div class="card" onclick="open_('kapalabhati')">
     <div class="card-tag">Índia · Hatha Yoga</div>
@@ -448,163 +677,6 @@
   </div>
 </div>
 
-<!-- WIM HOF -->
-<div class="section-label"><span class="effect-dot dot-wim"></span> método wim hof · retenção progressiva</div>
-<div class="cards-1">
-  <div class="card wim" onclick="open_('wimhof')">
-    <div class="card-tag">Holanda · Método Wim Hof</div>
-    <div class="card-name">Respiração Wim Hof</div>
-    <div class="card-sub">Hiperventilação controlada + retenção crescente</div>
-    <div class="wim-card-body" style="margin-top:8px">
-      <div style="flex:1">
-        <div class="card-effect">30 respirações profundas rápidas, depois expire todo o ar e prenda — cada rodada a retenção cresce naturalmente. Ativa sistema nervoso, aumenta tolerância ao estresse.</div>
-        <div class="card-pattern" style="margin-top:10px">
-          <span class="phase-pill">30× inspire fundo</span>
-          <span class="phase-pill">retenção sem ar</span>
-          <span class="phase-pill">recuperação 15s</span>
-        </div>
-      </div>
-      <div class="wim-rounds-preview">
-        <div class="wim-round-chip">Rodada 1 · meta 1 min</div>
-        <div class="wim-round-chip">Rodada 2 · meta 1,5 min</div>
-        <div class="wim-round-chip">Rodada 3 · meta 2 min</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CALMANTES -->
-<div class="section-label" style="margin-top:22px"><span class="effect-dot dot-cool"></span> calmante · equilíbrio · grounding</div>
-<div class="cards-1">
-
-  <div class="card cool card-h" onclick="open_('nadishodhana')">
-    <div class="card-left">
-      <div class="card-tag">Índia · Pranayama</div>
-      <div class="card-name">Nadi Shodhana</div>
-      <div class="card-sub">Narina Alternada</div>
-      <div class="card-pattern">
-        <span class="phase-pill">inspire esq. 4s</span><span class="phase-pill">ret. 4s</span><span class="phase-pill">expire dir. 8s</span>
-      </div>
-    </div>
-    <div class="card-right">
-      <div class="card-effect">Equilibra os hemisférios cerebrais e os canais sutil e físico. Clareza mental, calma profunda. Excelente para iniciar o dia com centramento pleno.</div>
-    </div>
-  </div>
-
-  <div class="card cool card-h" onclick="open_('tanden')">
-    <div class="card-left">
-      <div class="card-tag">Japão · Zen · Aikido</div>
-      <div class="card-name">Tanden Kokyu</div>
-      <div class="card-sub">Respiração do Hara</div>
-      <div class="card-pattern">
-        <span class="phase-pill">inspire 4s</span><span class="phase-pill">expire 6s</span>
-      </div>
-    </div>
-    <div class="card-right">
-      <div class="card-effect">Dirige a respiração ao tanden — centro de força 3 dedos abaixo do umbigo. Enraizamento profundo, serenidade, estabilidade emocional. Base do Zen e das artes marciais japonesas.</div>
-    </div>
-  </div>
-
-  <div class="card cool card-h" onclick="open_('taoist')">
-    <div class="card-left">
-      <div class="card-tag">China · Taoismo · Qi Gong</div>
-      <div class="card-name">Respiração Quadrada</div>
-      <div class="card-sub">Si Fang Hu Xi</div>
-      <div class="card-pattern">
-        <span class="phase-pill">inspire 4s</span><span class="phase-pill">ret. plena 4s</span><span class="phase-pill">expire 4s</span><span class="phase-pill">vazio 4s</span>
-      </div>
-    </div>
-    <div class="card-right">
-      <div class="card-effect">Quatro fases iguais criam ritmo perfeito entre yin e yang. Harmoniza o qi, acalma o sistema nervoso, traz equanimidade. Usada em meditação taoísta e nas práticas de Wudang.</div>
-    </div>
-  </div>
-
-  <div class="card cool card-h" onclick="open_('chandrabhedana')">
-    <div class="card-left">
-      <div class="card-tag">Índia · Pranayama</div>
-      <div class="card-name">Chandra Bhedana</div>
-      <div class="card-sub">Perfurando a Lua</div>
-      <div class="card-pattern">
-        <span class="phase-pill">inspire esq. 4s</span><span class="phase-pill">ret. 4s</span><span class="phase-pill">expire dir. 8s</span>
-      </div>
-    </div>
-    <div class="card-right">
-      <div class="card-effect">Ativa o canal lunar (ida nadi), associado ao feminino, ao frescor e à introspecção. Refresca o corpo, acalma a mente agitada. Antídoto para ansiedade e calor interno excessivo.</div>
-    </div>
-  </div>
-
-  <div class="card earth card-h" onclick="open_('478')">
-    <div class="card-left">
-      <div class="card-tag">Dr. Andrew Weil</div>
-      <div class="card-name">Respiração 4-7-8</div>
-      <div class="card-sub">Relaxante do Sistema Nervoso</div>
-      <div class="card-pattern">
-        <span class="phase-pill">inspire 4s</span><span class="phase-pill">ret. 7s</span><span class="phase-pill">expire 8s</span>
-      </div>
-    </div>
-    <div class="card-right">
-      <div class="card-effect">A longa retenção e a expiração prolongada ativam o nervo vago e o parassimpático. Reduz cortisol rapidamente. Excelente após despertar tenso ou ansioso.</div>
-    </div>
-  </div>
-
-  <div class="card earth card-h" onclick="open_('coherent')">
-    <div class="card-left">
-      <div class="card-tag">Respiração Coerente</div>
-      <div class="card-name">Coerência Cardíaca</div>
-      <div class="card-sub">5 respirações por minuto</div>
-      <div class="card-pattern">
-        <span class="phase-pill">inspire 5s</span><span class="phase-pill">expire 5s</span>
-      </div>
-    </div>
-    <div class="card-right">
-      <div class="card-effect">O ritmo de 5–6 respirações por minuto sincroniza coração, cérebro e sistema respiratório — o que a ciência chama de coerência cardíaca. Reduz ansiedade, estabiliza o humor. Pode ser feita em qualquer posição.</div>
-    </div>
-  </div>
-
-  <div class="card earth card-h" onclick="open_('prolongada')">
-    <div class="card-left">
-      <div class="card-tag">Universal · Grounding</div>
-      <div class="card-name">Expiração Prolongada</div>
-      <div class="card-sub">Ativação Vagal</div>
-      <div class="card-pattern">
-        <span class="phase-pill">inspire 4s</span><span class="phase-pill">expire 8s</span>
-      </div>
-    </div>
-    <div class="card-right">
-      <div class="card-effect">Expirar o dobro do tempo da inspiração aciona o nervo vago e desacelera o coração. Uma das técnicas mais simples e comprovadas de regulação emocional. Âncora imediata nos momentos de turbulência.</div>
-    </div>
-  </div>
-
-  <div class="card cool card-h" onclick="open_('anapana')">
-    <div class="card-left">
-      <div class="card-tag">Índia · Tailândia · Vipassana</div>
-      <div class="card-name">Anapanasati</div>
-      <div class="card-sub">Atenção plena ao sopro</div>
-      <div class="card-pattern">
-        <span class="phase-pill">inspire natural</span><span class="phase-pill">expire natural</span>
-      </div>
-    </div>
-    <div class="card-right">
-      <div class="card-effect">A técnica ensinada pelo Buda: apenas observar a respiração natural, sem controle, na entrada e saída pelas narinas. O timer marca o tempo total. Cultiva presença, desapego e equanimidade.</div>
-    </div>
-  </div>
-
-  <div class="card cool card-h" onclick="open_('sushumna')">
-    <div class="card-left">
-      <div class="card-tag">Índia · Tantra · Pranayama</div>
-      <div class="card-name">Canal Central</div>
-      <div class="card-sub">Sushumna Kriya</div>
-      <div class="card-pattern">
-        <span class="phase-pill">inspire 6s</span><span class="phase-pill">ret. 6s</span><span class="phase-pill">expire 6s</span>
-      </div>
-    </div>
-    <div class="card-right">
-      <div class="card-effect">Visualize energia subindo pela coluna enquanto inspira, pousando no ápice da cabeça na retenção, e descendo com serenidade na expiração. Integração corpo-mente, equilíbrio profundo.</div>
-    </div>
-  </div>
-
-</div>
-
 <!-- TIMER OVERLAY -->
 <div id="timer-overlay">
   <button id="back-btn" onclick="goBack()">← voltar</button>
@@ -613,7 +685,9 @@
   <div class="timer-name"   id="t-name"></div>
   <div class="timer-sub"    id="t-sub"></div>
 
-  
+  <div id="wim-dots"></div>
+
+  <button class="listen-btn" onclick="listenInstructions()">▶ ouvir instruções</button>
 
   <div id="timer-main">
     <div id="wim-ret-panel">
@@ -637,7 +711,6 @@
 
     <div class="cycles-info" id="cycles-info"></div>
     <div class="instructions" id="t-instructions"></div>
-
 
     <div class="rounds-row" id="rounds-row">
       <span class="rounds-label">rodadas:</span>
@@ -674,6 +747,91 @@ ring.style.strokeDashoffset = CIRC;
 const COLORS = { warm:'#c4713a', cool:'#4a7a8a', earth:'#6a7a4a', wim:'#7a4a8a' };
 
 const P = {
+  taoist: {
+    name:'Quadrada 4-4-4-4', sub:'Si Fang Hu Xi · Taoismo', origin:'China · Taoismo · Qi Gong', color:'cool',
+    instructions:'Quatro fases iguais de 4 segundos. Inspire · Retenção plena · Expire · Vazio. Observe o silêncio nos espaços entre os movimentos do ar.',
+    phases:[{label:'Inspire',duration:4},{label:'Retenção plena',duration:4},{label:'Expire',duration:4},{label:'Vazio',duration:4}],
+    defaultRounds:8, roundsLabel:'ciclos', doneSub:'O qi circula. Yin e yang em equilíbrio.',
+  },
+  quadrada6: {
+    name:'Quadrada 6-6-6-6', sub:'Ritmo aprofundado', origin:'China · Taoismo · Qi Gong', color:'cool',
+    instructions:'Quatro fases iguais de 6 segundos. Inspire · Retenção plena · Expire · Vazio. Permita que cada fase se aprofunde naturalmente.',
+    phases:[{label:'Inspire',duration:6},{label:'Retenção plena',duration:6},{label:'Expire',duration:6},{label:'Vazio',duration:6}],
+    defaultRounds:6, roundsLabel:'ciclos', doneSub:'O silêncio se aprofunda. O qi flui com calma.',
+  },
+  quadrada8: {
+    name:'Quadrada 8-8-8-8', sub:'Ritmo meditativo', origin:'China · Taoismo · Qi Gong', color:'cool',
+    instructions:'Quatro fases iguais de 8 segundos. Inspire · Retenção plena · Expire · Vazio. Pratique apenas se as versões menores já estiverem confortáveis.',
+    phases:[{label:'Inspire',duration:8},{label:'Retenção plena',duration:8},{label:'Expire',duration:8},{label:'Vazio',duration:8}],
+    defaultRounds:5, roundsLabel:'ciclos', doneSub:'A quietude se instalou. O corpo encontrou seu centro.',
+  },
+  quadrada10: {
+    name:'Quadrada 10-10-10-10', sub:'Ritmo contemplativo', origin:'China · Taoismo · Qi Gong', color:'cool',
+    instructions:'Quatro fases iguais de 10 segundos. Cada ciclo dura 40 segundos. Apenas para praticantes experientes. Inspire · Retenção · Expire · Vazio com plena atenção.',
+    phases:[{label:'Inspire',duration:10},{label:'Retenção plena',duration:10},{label:'Expire',duration:10},{label:'Vazio',duration:10}],
+    defaultRounds:4, roundsLabel:'ciclos', doneSub:'Contemplação profunda. O tempo se expandiu.',
+  },
+  nadishodhana: {
+    name:'Nadi Shodhana', sub:'Narina Alternada', origin:'Índia · Pranayama', color:'cool',
+    instructions:'Mão direita: polegar fecha narina dir., anelar fecha narina esq. Inspire esq. 4s → retenção 4s → expire dir. 8s. Depois inspire dir. 4s → retenção 4s → expire esq. 8s. Isso é 1 ciclo completo.',
+    phases:[{label:'Inspire — esq.',duration:4},{label:'Retenção',duration:4},{label:'Expire — dir.',duration:8},{label:'Inspire — dir.',duration:4},{label:'Retenção',duration:4},{label:'Expire — esq.',duration:8}],
+    defaultRounds:5, roundsLabel:'ciclos completos', doneSub:'Os canais estão limpos. Equilíbrio restaurado.',
+  },
+  tanden: {
+    name:'Tanden Kokyu', sub:'Respiração do Hara', origin:'Japão · Zen · Aikido', color:'cool',
+    instructions:'Coluna ereta. Atenção ao tanden — 3 dedos abaixo do umbigo. Inspire expandindo o abdômen como uma tigela. Expire lentamente, deixando o centro se recolher com calma.',
+    phases:[{label:'Inspire — hara',duration:4},{label:'Expire — lento',duration:6}],
+    defaultRounds:10, roundsLabel:'ciclos', doneSub:'O centro está firme. A mente, quieta.',
+  },
+  chandrabhedana: {
+    name:'Chandra Bhedana', sub:'Perfurando a Lua', origin:'Índia · Pranayama', color:'cool',
+    instructions:'Tampe a narina direita com o polegar. Inspire pela narina esquerda (lunar, feminina). Tampe a esquerda com o anelar, expire pela direita.',
+    phases:[{label:'Inspire — esq.',duration:4},{label:'Retenção',duration:4},{label:'Expire — dir.',duration:8}],
+    defaultRounds:7, roundsLabel:'ciclos', doneSub:'A lua acalma. O sistema refresca.',
+  },
+  nestor: {
+    name:'Respiração 5,5', sub:'O ritmo ideal', origin:'James Nestor · Respire', color:'earth',
+    instructions:'Inspire suavemente pelo nariz por 5,5 segundos, expandindo o abdômen. Expire suavemente pelo nariz por 5,5 segundos. Sem forçar — apenas flua. Este é o ritmo que a ciência aponta como ideal para o ser humano.',
+    phases:[{label:'Inspire',duration:5.5},{label:'Expire',duration:5.5}],
+    defaultRounds:16, roundsLabel:'respirações (≈ 3 min)', doneSub:'O ritmo perfeito. O corpo encontrou seu compasso natural.',
+  },
+  coherent: {
+    name:'Coerência Cardíaca', sub:'5 respirações por minuto', origin:'Respiração Coerente', color:'earth',
+    instructions:'Inspire suavemente pelo nariz por 5 segundos. Expire suavemente por 5 segundos. Não force — apenas flua. O ritmo sincroniza coração, pulmões e cérebro.',
+    phases:[{label:'Inspire',duration:5},{label:'Expire',duration:5}],
+    defaultRounds:18, roundsLabel:'respirações (≈ 3 min)', doneSub:'Coerência restaurada. O coração e a mente falam a mesma língua.',
+  },
+  '478': {
+    name:'Respiração 4-7-8', sub:'Relaxante do Sistema Nervoso', origin:'Dr. Andrew Weil', color:'earth',
+    instructions:'Expire todo o ar. Inspire pelo nariz contando 4. Prenda contando 7. Expire completamente pela boca contando 8. A proporção é o que importa.',
+    phases:[{label:'Inspire',duration:4},{label:'Retenção',duration:7},{label:'Expire',duration:8}],
+    defaultRounds:6, roundsLabel:'ciclos', doneSub:'O nervo vago responde. O cortisol cede.',
+  },
+  prolongada: {
+    name:'Expiração Prolongada', sub:'Ativação Vagal', origin:'Universal · Grounding', color:'earth',
+    instructions:'Inspire suavemente pelo nariz por 4 segundos. Expire lentamente — o dobro do tempo — por 8 segundos. Pode ser feita em qualquer posição, a qualquer momento.',
+    phases:[{label:'Inspire',duration:4},{label:'Expire — longo',duration:8}],
+    defaultRounds:15, roundsLabel:'ciclos (≈ 3 min)', doneSub:'O nervo vago acalma. A âncora foi lançada.',
+  },
+  anapana: {
+    name:'Anapanasati', sub:'Atenção plena ao sopro', origin:'Índia / Tailândia · Vipassana', color:'cool',
+    instructions:'Não controle nada. Apenas observe o ar entrando e saindo pelas narinas. Quando a mente vagar, retorne gentilmente. O timer marca o tempo — a respiração é sua.',
+    phases:[{label:'Observe — inspire',duration:4},{label:'Observe — expire',duration:5}],
+    defaultRounds:12, roundsLabel:'ciclos (aprox.)', doneSub:'O sopro é o mestre. A mente aprendeu a ouvir.',
+  },
+  sushumna: {
+    name:'Canal Central', sub:'Sushumna Kriya', origin:'Índia · Tantra · Pranayama', color:'cool',
+    instructions:'Visualize um canal de luz na coluna vertebral. Inspire sentindo energia subir da base ao topo da cabeça. Retenha no ápice. Expire descendo com serenidade.',
+    phases:[{label:'Inspire — sobe',duration:6},{label:'Retenção — ápice',duration:6},{label:'Expire — desce',duration:6}],
+    defaultRounds:7, roundsLabel:'ciclos', doneSub:'O canal central, iluminado. Corpo e mente, integrados.',
+  },
+  wimhof: {
+    name:'Wim Hof', sub:'Hiperventilação + Retenção Progressiva', origin:'Holanda · Método Wim Hof', color:'wim',
+    isWim:true,
+    instructions:'Deite-se ou sente-se. 30 respirações profundas rápidas, depois expire tudo e prenda. Aperte "inspirar de volta" quando sentir necessidade. 3 rodadas com metas crescentes.',
+    breaths:30, retGoals:[60,90,120],
+    defaultRounds:3, roundsLabel:'rodadas', doneSub:'Sistema nervoso ativado e reset. Mente clara.',
+  },
   kapalabhati: {
     name:'Kapalabhati', sub:'Crânio Brilhante', origin:'Índia · Hatha Yoga', color:'warm',
     instructions:'Sente-se ereta. Contraia o abdômen para expirar com força pelo nariz. A inspiração é passiva e automática. Mantenha o rosto relaxado.',
@@ -698,203 +856,67 @@ const P = {
     phases:[{label:'Inspire — dir.',duration:4},{label:'Retenção',duration:4},{label:'Expire — esq.',duration:8}],
     defaultRounds:7, roundsLabel:'ciclos', doneSub:'O sol interior foi ativado.',
   },
-  wimhof: {
-    name:'Wim Hof', sub:'Hiperventilação + Retenção Progressiva', origin:'Holanda · Método Wim Hof', color:'wim',
-    isWim:true,
-    instructions:'Deite-se ou sente-se. 30 respirações profundas rápidas, depois expire tudo e prenda. Aperte "inspirar de volta" quando sentir necessidade. 3 rodadas com metas crescentes.',
-    breaths:30, retGoals:[60,90,120],
-    defaultRounds:3, roundsLabel:'rodadas', doneSub:'Sistema nervoso ativado e reset. Mente clara.',
-  },
-  nadishodhana: {
-    name:'Nadi Shodhana', sub:'Narina Alternada', origin:'Índia · Pranayama', color:'cool',
-    instructions:'Mão direita: polegar fecha narina dir., anelar fecha narina esq. Inspire esq. → retenção → expire dir. → inspire dir. → expire esq. = 1 ciclo completo.',
-    phases:[{label:'Inspire — esq.',duration:4},{label:'Retenção',duration:4},{label:'Expire — dir.',duration:8},{label:'Inspire — dir.',duration:4},{label:'Retenção',duration:4},{label:'Expire — esq.',duration:8}],
-    defaultRounds:5, roundsLabel:'ciclos completos', doneSub:'Os canais estão limpos. Equilíbrio restaurado.',
-  },
-  tanden: {
-    name:'Tanden Kokyu', sub:'Respiração do Hara', origin:'Japão · Zen · Aikido', color:'cool',
-    instructions:'Coluna ereta. Atenção ao tanden — 3 dedos abaixo do umbigo. Inspire expandindo o abdômen como uma tigela. Expire lentamente, deixando o centro se recolher com calma.',
-    phases:[{label:'Inspire — hara',duration:4},{label:'Expire — lento',duration:6}],
-    defaultRounds:10, roundsLabel:'ciclos', doneSub:'O centro está firme. A mente, quieta.',
-  },
-  taoist: {
-    name:'Respiração Quadrada', sub:'Si Fang Hu Xi · Taoismo', origin:'China · Taoismo · Qi Gong', color:'cool',
-    instructions:'Quatro fases iguais de 4 segundos. Inspire · Retenção plena · Expire · Vazio. Observe o silêncio nos espaços entre os movimentos do ar.',
-    phases:[{label:'Inspire',duration:4},{label:'Retenção plena',duration:4},{label:'Expire',duration:4},{label:'Vazio',duration:4}],
-    defaultRounds:8, roundsLabel:'ciclos', doneSub:'O qi circula. Yin e yang em equilíbrio.',
-  },
-  chandrabhedana: {
-    name:'Chandra Bhedana', sub:'Perfurando a Lua', origin:'Índia · Pranayama', color:'cool',
-    instructions:'Tampe a narina direita com o polegar. Inspire pela narina esquerda (lunar, feminina). Tampe a esquerda com o anelar, expire pela direita.',
-    phases:[{label:'Inspire — esq.',duration:4},{label:'Retenção',duration:4},{label:'Expire — dir.',duration:8}],
-    defaultRounds:7, roundsLabel:'ciclos', doneSub:'A lua acalma. O sistema refresca.',
-  },
-  '478': {
-    name:'Respiração 4-7-8', sub:'Relaxante do Sistema Nervoso', origin:'Dr. Andrew Weil', color:'earth',
-    instructions:'Expire todo o ar. Inspire pelo nariz contando 4. Prenda contando 7. Expire completamente pela boca contando 8. A proporção é o que importa.',
-    phases:[{label:'Inspire',duration:4},{label:'Retenção',duration:7},{label:'Expire',duration:8}],
-    defaultRounds:6, roundsLabel:'ciclos', doneSub:'O nervo vago responde. O cortisol cede.',
-  },
-  coherent: {
-    name:'Coerência Cardíaca', sub:'5 respirações por minuto', origin:'Respiração Coerente', color:'earth',
-    instructions:'Inspire suavemente pelo nariz por 5 segundos. Expire suavemente por 5 segundos. Não force — apenas flua. O ritmo sincroniza coração, pulmões e cérebro.',
-    phases:[{label:'Inspire',duration:5},{label:'Expire',duration:5}],
-    defaultRounds:18, roundsLabel:'respirações (≈ 3 min)', doneSub:'Coerência restaurada. O coração e a mente falam a mesma língua.',
-  },
-  prolongada: {
-    name:'Expiração Prolongada', sub:'Ativação Vagal', origin:'Universal · Grounding', color:'earth',
-    instructions:'Inspire suavemente pelo nariz por 4 segundos. Expire lentamente — o dobro do tempo — por 8 segundos. Pode ser feita em qualquer posição, a qualquer momento.',
-    phases:[{label:'Inspire',duration:4},{label:'Expire — longo',duration:8}],
-    defaultRounds:10, roundsLabel:'ciclos', doneSub:'O nervo vago acalma. A âncora foi lançada.',
-  },
-  anapana: {
-    name:'Anapanasati', sub:'Atenção plena ao sopro', origin:'Índia / Tailândia · Vipassana', color:'cool',
-    instructions:'Não controle nada. Apenas observe o ar entrando e saindo pelas narinas. Quando a mente vagar, retorne gentilmente. O timer marca o tempo — a respiração é sua.',
-    phases:[{label:'Observe — inspire',duration:4},{label:'Observe — expire',duration:5}],
-    defaultRounds:12, roundsLabel:'ciclos (aprox.)', doneSub:'O sopro é o mestre. A mente aprendeu a ouvir.',
-  },
-  sushumna: {
-    name:'Canal Central', sub:'Sushumna Kriya', origin:'Índia · Tantra · Pranayama', color:'cool',
-    instructions:'Visualize um canal de luz na coluna vertebral. Inspire sentindo energia subir da base ao topo da cabeça. Retenha no ápice. Expire descendo com serenidade.',
-    phases:[{label:'Inspire — sobe',duration:6},{label:'Retenção — ápice',duration:6},{label:'Expire — desce',duration:6}],
-    defaultRounds:7, roundsLabel:'ciclos', doneSub:'O canal central, iluminado. Corpo e mente, integrados.',
-  },
 };
 
-// ── Tibetan Singing Bowl (Web Audio API) ─────────────────────
-// Real singing bowls have inharmonic partials — the upper
-// partials are NOT integer multiples of the fundamental.
-// These ratios are measured from actual bowl recordings.
-// Two bowls: a smaller one (phase change) and a larger one (done).
+// ── Tibetan Bowl ──────────────────────────────────────────────
 let audioCtx=null;
 
 function bell(type='phase'){
   try{
     if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
     const ctx=audioCtx;
-    const t=ctx.currentTime;
-
-    // Bowl presets — [frequency, relative amplitude, decay seconds]
-    // Ratios 1 : 2.76 : 5.41 : 8.93 approximate real bowl inharmonicity
-    const bowl = type==='done'
-      ? { f:180, vol:0.09, partials:[
-            [1,     1.0,  9.0],   // fundamental — long sustain
-            [2.756, 0.45, 6.5],   // 2nd partial
-            [5.404, 0.20, 4.2],   // 3rd partial
-            [8.933, 0.09, 2.8],   // 4th partial (bright ring)
-            [13.35, 0.04, 1.6],   // 5th partial (shimmer)
-          ]}
-      : { f:324, vol:0.065, partials:[
-            [1,     1.0,  6.0],
-            [2.756, 0.42, 4.5],
-            [5.404, 0.18, 3.0],
-            [8.933, 0.08, 2.0],
-            [13.35, 0.035,1.2],
-          ]};
-
-    // Soft compressor to keep it gentle
-    const comp=ctx.createDynamicsCompressor();
-    comp.threshold.value=-18; comp.knee.value=12;
-    comp.ratio.value=3; comp.attack.value=0.003; comp.release.value=0.4;
-    comp.connect(ctx.destination);
-
-    // Master envelope — very soft attack (mallet strike is brief)
-    const master=ctx.createGain();
-    master.gain.setValueAtTime(0,t);
-    master.gain.linearRampToValueAtTime(bowl.vol, t+0.008); // 8ms strike
-    master.gain.setValueAtTime(bowl.vol, t+0.012);
-    master.gain.exponentialRampToValueAtTime(0.0001, t+bowl.partials[0][2]+1);
-    master.connect(comp);
-
-    // Strike noise burst — the "ding" transient of the mallet
-    const bufLen=ctx.sampleRate*0.04;
-    const noiseBuf=ctx.createBuffer(1,bufLen,ctx.sampleRate);
-    const nd=noiseBuf.getChannelData(0);
-    for(let i=0;i<bufLen;i++) nd[i]=(Math.random()*2-1)*Math.pow(1-i/bufLen,4)*0.35;
-    const noiseSrc=ctx.createBufferSource();
-    noiseSrc.buffer=noiseBuf;
-    const noiseFilt=ctx.createBiquadFilter();
-    noiseFilt.type='bandpass';
-    noiseFilt.frequency.value=bowl.f*3;
-    noiseFilt.Q.value=2;
-    const noiseGain=ctx.createGain();
-    noiseGain.gain.setValueAtTime(0.6,t);
-    noiseGain.gain.exponentialRampToValueAtTime(0.0001,t+0.06);
-    noiseSrc.connect(noiseFilt); noiseFilt.connect(noiseGain); noiseGain.connect(master);
-    noiseSrc.start(t); noiseSrc.stop(t+0.07);
-
-    // Sinusoidal partials with individual decay
-    bowl.partials.forEach(([ratio,amp,decay])=>{
-      const osc=ctx.createOscillator();
-      const g=ctx.createGain();
-      osc.type='sine';
-      osc.frequency.value=bowl.f*ratio;
-      // Very slight frequency wobble on fundamental = bowl resonance character
-      if(ratio===1){
-        osc.frequency.setValueAtTime(bowl.f*ratio*1.002, t);
-        osc.frequency.exponentialRampToValueAtTime(bowl.f*ratio, t+0.3);
-      }
-      g.gain.setValueAtTime(0,t);
-      g.gain.linearRampToValueAtTime(amp,t+0.01);
-      g.gain.exponentialRampToValueAtTime(0.0001,t+decay);
-      osc.connect(g); g.connect(master);
-      osc.start(t); osc.stop(t+decay+0.05);
-    });
-
+    function doPlay(){
+      const t=ctx.currentTime;
+      const bowl = type==='done'
+        ? { f:180, vol:0.09, partials:[[1,1.0,9.0],[2.756,0.45,6.5],[5.404,0.20,4.2],[8.933,0.09,2.8],[13.35,0.04,1.6]] }
+        : { f:324, vol:0.065, partials:[[1,1.0,6.0],[2.756,0.42,4.5],[5.404,0.18,3.0],[8.933,0.08,2.0],[13.35,0.035,1.2]] };
+      const comp=ctx.createDynamicsCompressor();
+      comp.threshold.value=-18; comp.knee.value=12; comp.ratio.value=3;
+      comp.attack.value=0.003; comp.release.value=0.4; comp.connect(ctx.destination);
+      const master=ctx.createGain();
+      master.gain.setValueAtTime(0,t);
+      master.gain.linearRampToValueAtTime(bowl.vol,t+0.008);
+      master.gain.setValueAtTime(bowl.vol,t+0.012);
+      master.gain.exponentialRampToValueAtTime(0.0001,t+bowl.partials[0][2]+1);
+      master.connect(comp);
+      const bufLen=ctx.sampleRate*0.04;
+      const noiseBuf=ctx.createBuffer(1,bufLen,ctx.sampleRate);
+      const nd=noiseBuf.getChannelData(0);
+      for(let i=0;i<bufLen;i++) nd[i]=(Math.random()*2-1)*Math.pow(1-i/bufLen,4)*0.35;
+      const ns=ctx.createBufferSource(); ns.buffer=noiseBuf;
+      const nf=ctx.createBiquadFilter(); nf.type='bandpass'; nf.frequency.value=bowl.f*3; nf.Q.value=2;
+      const ng=ctx.createGain(); ng.gain.setValueAtTime(0.6,t); ng.gain.exponentialRampToValueAtTime(0.0001,t+0.06);
+      ns.connect(nf); nf.connect(ng); ng.connect(master); ns.start(t); ns.stop(t+0.07);
+      bowl.partials.forEach(([ratio,amp,decay])=>{
+        const osc=ctx.createOscillator(); const g=ctx.createGain();
+        osc.type='sine'; osc.frequency.value=bowl.f*ratio;
+        if(ratio===1){ osc.frequency.setValueAtTime(bowl.f*1.002,t); osc.frequency.exponentialRampToValueAtTime(bowl.f,t+0.3); }
+        g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(amp,t+0.01); g.gain.exponentialRampToValueAtTime(0.0001,t+decay);
+        osc.connect(g); g.connect(master); osc.start(t); osc.stop(t+decay+0.05);
+      });
+    }
+    if(ctx.state==='suspended') ctx.resume().then(doPlay).catch(()=>{});
+    else doPlay();
   }catch(e){}
 }
-// ─────────────────────────────────────────────────────────────
 
-// ── No-Sleep: mantém tela acesa (iOS Safari + Android Chrome) ──
-// Estratégia 1: Wake Lock API (Chrome Android, Safari 16.4+)
-// Estratégia 2: vídeo silencioso em loop (iOS Safari mais antigo)
-// Estratégia 3: audio context silencioso pulsando (fallback extra)
-let wakeLock=null;
-let noSleepVideo=null;
-let noSleepAudio=null;
+// ── No-Sleep ──────────────────────────────────────────────────
+let wakeLock=null, noSleepVideo=null, noSleepAudio=null;
 
 function buildNoSleepVideo(){
-  // 1×1 px MP4 transparente em base64 — loop infinito engana o iOS
-  // a presença de um vídeo tocando impede o bloqueio de tela no Safari
   const v=document.createElement('video');
-  v.setAttribute('playsinline','');
-  v.setAttribute('muted','');
-  v.setAttribute('loop','');
+  v.setAttribute('playsinline',''); v.setAttribute('muted',''); v.setAttribute('loop','');
   v.style.cssText='position:fixed;width:1px;height:1px;top:0;left:0;opacity:0;pointer-events:none;';
-  // Minimal valid MP4 (1×1 px, 1 frame, ~500 bytes) em base64
   v.src='data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMW1wNDEAAAAIZnJlZQAAAs1tZGF0AAACrgYF//+q3EXpvebZSLeWLNgg2SPu73gyNjQgLSBjb3JlIDE0OCByMjYwMSBhMGNkN2QzIC0gSC4yNjQvTVBFRy00IEFWQyBjb2RlYyAtIENvcHlsZWZ0IDIwMDMtMjAxNSAtIGh0dHA6Ly93d3cudmlkZW9sYW4ub3JnL3gyNjQuaHRtbCAtIG9wdGlvbnM6IGNhYmFjPTEgcmVmPTMgZGVibG9jaz0xOjA6MCBhbmFseXNlPTB4MzoweDExMyBtZT1oZXggc3VibWU9NyBwc3k9MSBwc3lfcmQ9MS4wMDowLjAwIG1peGVkX3JlZj0xIG1lX3JhbmdlPTE2IGNocm9tYV9tZT0xIHRyZWxsaXM9MSA4eDhkY3Q9MSBjcW09MCBkZWFkem9uZT0yMSwxMSBmYXN0X3Bza2lwPTEgY2hyb21hX3FwX29mZnNldD0tMiB0aHJlYWRzPTMgbG9va2FoZWFkX3RocmVhZHM9MSBzbGljZWRfdGhyZWFkcz0wIG5yPTAgZGVjaW1hdGU9MSBpbnRlcmxhY2VkPTAgYmx1cmF5X2NvbXBhdD0wIGNvbnN0cmFpbmVkX2ludHJhPTAgYmZyYW1lcz0zIGJfcHlyYW1pZD0yIGJfYWRhcHQ9MSBiX2JpYXM9MCBkaXJlY3Q9MSB3ZWlnaHRiPTEgb3Blbl9nb3A9MCB3ZWlnaHRwPTIga2V5aW50PTI1MCBrZXlpbnRfbWluPTI1IHNjZW5lY3V0PTQwIGludHJhX3JlZnJlc2g9MCByY19sb29rYWhlYWQ9NDAgcmM9Y3JmIG1idHJlZT0xIGNyZj0yMy4wIHFjb21wPTAuNjAgcXBtaW49MCBxcG1heD02OSBxcHN0ZXA9NCBpcF9yYXRpbz0xLjQwIGFxPTE6MS4wMACAAAAPZWxpYngtLT4KICAgICAgICBbMF0gU3RhcnQgbWVhc3VyaW5nIHN0cmVhbQogICAgICAgIFswXSBEb25lIG1lYXN1cmluZyBzdHJlYW0KAAAADGluZnIAAAAA';
-  document.body.appendChild(v);
-  return v;
+  document.body.appendChild(v); return v;
 }
 
 async function acquireWakeLock(){
-  // Estratégia 1: Wake Lock API
-  try{
-    if('wakeLock' in navigator){
-      wakeLock=await navigator.wakeLock.request('screen');
-      return; // sucesso — não precisa de fallback
-    }
-  }catch(e){}
-
-  // Estratégia 2: vídeo silencioso (iOS Safari)
-  try{
-    if(!noSleepVideo) noSleepVideo=buildNoSleepVideo();
-    await noSleepVideo.play();
-    return;
-  }catch(e){}
-
-  // Estratégia 3: AudioContext pulsando silenciosamente a cada 25s
+  try{ if('wakeLock' in navigator){ wakeLock=await navigator.wakeLock.request('screen'); return; } }catch(e){}
+  try{ if(!noSleepVideo) noSleepVideo=buildNoSleepVideo(); await noSleepVideo.play(); return; }catch(e){}
   try{
     if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
-    function silentPulse(){
-      if(!running) return;
-      const o=audioCtx.createOscillator();
-      const g=audioCtx.createGain();
-      g.gain.value=0.00001; // inaudível
-      o.connect(g); g.connect(audioCtx.destination);
-      o.start(); o.stop(audioCtx.currentTime+0.01);
-      noSleepAudio=setTimeout(silentPulse,25000);
-    }
+    function silentPulse(){ if(!running) return; const o=audioCtx.createOscillator(),g=audioCtx.createGain(); g.gain.value=0.00001; o.connect(g); g.connect(audioCtx.destination); o.start(); o.stop(audioCtx.currentTime+0.01); noSleepAudio=setTimeout(silentPulse,25000); }
     silentPulse();
   }catch(e){}
 }
@@ -905,20 +927,31 @@ function releaseWakeLock(){
   try{ if(noSleepAudio){ clearTimeout(noSleepAudio); noSleepAudio=null; } }catch(e){}
 }
 
-document.addEventListener('visibilitychange',()=>{
-  if(document.visibilityState==='visible' && running) acquireWakeLock();
-});
-// ─────────────────────────────────────────────────────────────
+document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='visible'&&running) acquireWakeLock(); });
 
-// State
+// ── Speech ────────────────────────────────────────────────────
+function listenInstructions(){
+  if(!cur) return;
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(cur.instructions);
+  u.lang='pt-BR'; u.rate=0.88; u.pitch=1.0;
+  const falar=()=>{
+    const vozes=window.speechSynthesis.getVoices();
+    const voz=vozes.find(v=>v.name.includes('Luciana'))||vozes.find(v=>v.lang==='pt-BR')||vozes.find(v=>v.lang.startsWith('pt'));
+    if(voz) u.voice=voz;
+    window.speechSynthesis.speak(u);
+  };
+  if(window.speechSynthesis.getVoices().length>0){ falar(); }
+  else{ window.speechSynthesis.onvoiceschanged=()=>{ window.speechSynthesis.onvoiceschanged=null; falar(); }; window.speechSynthesis.speak(new SpeechSynthesisUtterance('')); }
+}
+
+// ── State ─────────────────────────────────────────────────────
 let cur=null, rounds=5, phaseIdx=0, cycleCount=0, timeLeft=0, running=false;
 let ticker=null;
-// Wim Hof
 let wimPhase='breathe', wimBC=0, wimRetSec=0, wimRet=null, wimRound=0;
 
 function open_(key){
-  cur=P[key];
-  rounds=cur.defaultRounds;
+  cur=P[key]; rounds=cur.defaultRounds;
   document.getElementById('rounds-val').textContent=rounds;
   document.getElementById('t-origin').textContent=cur.origin;
   document.getElementById('t-name').textContent=cur.name;
@@ -926,12 +959,10 @@ function open_(key){
   document.getElementById('t-instructions').textContent=cur.instructions;
   document.getElementById('done-sub').textContent=cur.doneSub;
   ring.style.stroke=COLORS[cur.color]||COLORS.cool;
-
   const isWim=!!cur.isWim;
   document.getElementById('wim-dots').classList.toggle('show',isWim);
   document.getElementById('rounds-row').style.display=isWim?'none':'';
   if(isWim) buildDots();
-
   document.getElementById('timer-overlay').classList.add('active');
   document.getElementById('timer-main').style.display='';
   document.getElementById('done-msg').classList.remove('show');
@@ -939,15 +970,8 @@ function open_(key){
 }
 
 function buildDots(){
-  const el=document.getElementById('wim-dots');
-  el.innerHTML='';
-  for(let i=0;i<3;i++){
-    const d=document.createElement('div');
-    d.className='wim-dot';
-    d.id='wd'+i;
-    d.textContent='R'+(i+1);
-    el.appendChild(d);
-  }
+  const el=document.getElementById('wim-dots'); el.innerHTML='';
+  for(let i=0;i<3;i++){ const d=document.createElement('div'); d.className='wim-dot'; d.id='wd'+i; d.textContent='R'+(i+1); el.appendChild(d); }
 }
 
 function resetTimer(){
@@ -958,40 +982,32 @@ function resetTimer(){
   document.getElementById('done-msg').classList.remove('show');
   document.getElementById('timer-main').style.display='';
   document.getElementById('wim-ret-panel').classList.remove('show');
-  if(cur&&cur.isWim){ buildDots(); showWimBreath(); }
-  else updateDisp();
+  if(cur&&cur.isWim){ buildDots(); showWimBreath(); } else updateDisp();
 }
 
 function goBack(){
-  clearInterval(ticker); clearInterval(wimRet);
-  running=false;
+  clearInterval(ticker); clearInterval(wimRet); running=false;
+  window.speechSynthesis.cancel();
   releaseWakeLock();
   document.getElementById('timer-overlay').classList.remove('active');
 }
 
-function toggleTimer(){
-  running ? pauseT() : startT();
-}
+function toggleTimer(){ running ? pauseT() : startT(); }
 
 function pauseT(){
-  clearInterval(ticker); clearInterval(wimRet);
-  running=false;
+  clearInterval(ticker); clearInterval(wimRet); running=false;
   releaseWakeLock();
   document.getElementById('ss-btn').textContent='continuar';
 }
 
 function startT(){
-  running=true;
-  acquireWakeLock();
+  try{ if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)(); if(audioCtx.state==='suspended') audioCtx.resume(); }catch(e){}
+  running=true; acquireWakeLock();
   document.getElementById('ss-btn').textContent='pausar';
   if(cur.isWim){ startWim(); }
-  else{
-    if(timeLeft<=0) timeLeft=cur.phases[phaseIdx].duration;
-    ticker=setInterval(tick,50);
-  }
+  else{ if(timeLeft<=0) timeLeft=cur.phases[phaseIdx].duration; ticker=setInterval(tick,50); }
 }
 
-// Normal tick
 function tick(){
   timeLeft-=0.05;
   if(timeLeft<=0){
@@ -1013,7 +1029,6 @@ function updateDisp(){
   document.getElementById('cycles-info').textContent=cur.roundsLabel+': '+(cycleCount+1)+' / '+rounds;
 }
 
-// Wim Hof
 function showWimBreath(){
   document.getElementById('wim-ret-panel').classList.remove('show');
   const left=cur.breaths-wimBC;
@@ -1023,11 +1038,9 @@ function showWimBreath(){
   document.getElementById('cycles-info').textContent='Rodada '+(wimRound+1)+' / 3';
   ring.style.strokeDashoffset=CIRC*(1-wimBC/cur.breaths);
   for(let i=0;i<3;i++){
-    const d=document.getElementById('wd'+i);
-    if(!d) continue;
+    const d=document.getElementById('wd'+i); if(!d) continue;
     d.classList.remove('active','done');
-    if(i<wimRound) d.classList.add('done');
-    else if(i===wimRound) d.classList.add('active');
+    if(i<wimRound) d.classList.add('done'); else if(i===wimRound) d.classList.add('active');
   }
 }
 
@@ -1041,14 +1054,10 @@ function wimTick(){
   timeLeft-=0.05;
   if(timeLeft<=0){
     if(wimPhase==='recovery'){
-      wimRound++;
-      if(wimRound>=3){ clearInterval(ticker); running=false; bell('done'); showDone(); return; }
-      wimPhase='breathe'; wimBC=0; timeLeft=1.5;
-      bell('phase');
-      showWimBreath(); return;
+      wimRound++; if(wimRound>=3){ clearInterval(ticker); running=false; bell('done'); showDone(); return; }
+      wimPhase='breathe'; wimBC=0; timeLeft=1.5; bell('phase'); showWimBreath(); return;
     }
-    wimBC++;
-    ring.style.strokeDashoffset=CIRC*(1-wimBC/cur.breaths);
+    wimBC++; ring.style.strokeDashoffset=CIRC*(1-wimBC/cur.breaths);
     document.getElementById('count-display').textContent=cur.breaths-wimBC;
     if(wimBC>=cur.breaths){ clearInterval(ticker); wimPhase='retention'; bell('phase'); enterRet(); return; }
     timeLeft=1.5;
@@ -1060,15 +1069,10 @@ function enterRet(){
   ring.style.strokeDashoffset=CIRC;
   document.getElementById('phase-label').textContent='Retenção';
   document.getElementById('count-display').textContent='—';
-  wimRetSec=0;
-  document.getElementById('wim-ret-sec').textContent=0;
+  wimRetSec=0; document.getElementById('wim-ret-sec').textContent=0;
   const goal=cur.retGoals[wimRound]||120;
   document.getElementById('wim-ret-sub').textContent='segundos  ·  meta: '+goal+'s';
-  wimRet=setInterval(()=>{
-    wimRetSec++;
-    document.getElementById('wim-ret-sec').textContent=wimRetSec;
-    ring.style.strokeDashoffset=CIRC*(1-Math.min(wimRetSec/goal,1));
-  },1000);
+  wimRet=setInterval(()=>{ wimRetSec++; document.getElementById('wim-ret-sec').textContent=wimRetSec; ring.style.strokeDashoffset=CIRC*(1-Math.min(wimRetSec/goal,1)); },1000);
 }
 
 function endRetention(){
@@ -1078,12 +1082,11 @@ function endRetention(){
   document.getElementById('phase-label').textContent='Recuperação';
   document.getElementById('count-display').textContent=15;
   document.getElementById('unit-label').textContent='seg';
-  ring.style.strokeDashoffset=CIRC;
-  bell('phase');
+  ring.style.strokeDashoffset=CIRC; bell('phase');
   if(running) ticker=setInterval(wimTick,50);
 }
 
-function listenInstructions(){   if(!cur) return;   window.speechSynthesis.cancel();   const u = new SpeechSynthesisUtterance(cur.instructions);   u.lang = 'pt-BR';   u.rate = 0.88;   u.pitch = 1.0;   // Tenta usar voz Luciana (iOS) ou qualquer voz pt-BR disponível   const vozes = window.speechSynthesis.getVoices();   const voz = vozes.find(v => v.name.includes('Luciana'))            || vozes.find(v => v.lang === 'pt-BR')            || vozes.find(v => v.lang.startsWith('pt'));   if(voz) u.voice = voz;   window.speechSynthesis.speak(u); }  function changeRounds(d){ rounds=Math.max(1,Math.min(99,rounds+d)); document.getElementById('rounds-val').textContent=rounds; }
+function changeRounds(d){ rounds=Math.max(1,Math.min(99,rounds+d)); document.getElementById('rounds-val').textContent=rounds; }
 
 function showDone(){
   document.getElementById('timer-main').style.display='none';
@@ -1093,11 +1096,8 @@ function showDone(){
 </script>
 
 <script>
-// Registra o Service Worker para funcionamento offline
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
-  });
+  window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); });
 }
 </script>
 </body>
