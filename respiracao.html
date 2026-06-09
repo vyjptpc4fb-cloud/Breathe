@@ -513,6 +513,28 @@
 
 </div>
 
+<!-- FARINELLI -->
+<div class="section-label" style="margin-top:10px"><span class="effect-dot dot-warm"></span> canto · bel canto · suporte vocal</div>
+<div class="cards-1">
+
+  <div class="card card-h" onclick="open_('farinelli')">
+    <div class="card-left">
+      <div class="card-tag">Europa · Bel Canto · Séc. XVIII</div>
+      <div class="card-name">Respiração Farinelli</div>
+      <div class="card-sub">Suporte e sustentação vocal</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 5→10s</span>
+        <span class="phase-pill">suspenda 5→10s</span>
+        <span class="phase-pill">expire 5→10s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Atribuída a Farinelli e ao método de Porpora. Seis níveis progressivos treinam o <em>appoggio</em> — suporte ativo sem tensão. Nas contagens maiores, a inspiração se faz em platôs: a respiração de dedal de Lamperti.</div>
+    </div>
+  </div>
+
+</div>
+
 <!-- CALMANTES -->
 <div class="section-label" style="margin-top:10px"><span class="effect-dot dot-cool"></span> calmante · equilíbrio · grounding</div>
 <div class="cards-1">
@@ -838,6 +860,19 @@ const P = {
     instructions:'Inspire suavemente pelo nariz por 6 segundos. Expire lentamente pelo nariz por 12 segundos. Versão aprofundada — a expiração mais longa intensifica a ativação vagal e cria calma mais estável.',
     phases:[{label:'Inspire',duration:6},{label:'Expire — longo',duration:12}],
     defaultRounds:10, roundsLabel:'ciclos (≈ 3 min)', doneSub:'O nervo vago responde com profundidade. Calma estável.',
+  },
+  farinelli: {
+    name:'Respiração Farinelli', sub:'Suporte e sustentação vocal', origin:'Europa · Bel Canto · Séc. XVIII', color:'warm',
+    instructions:'Seis níveis progressivos de 5 a 10 tempos, segundo Richard Miller (The Structure of Singing). Inspire — Suspenda — Expire, sempre simétrico. Nas contagens maiores, a inspiração acontece em platôs: micro-suspensões dentro da própria fase inspiratória, sem expirar. É a respiração de dedal de Lamperti. Appoggio ativo, sem tensão visível no pescoço ou ombros.',
+    phases:[
+      {label:'Inspire — nível 1',duration:5},{label:'Suspenda',duration:5},{label:'Expire',duration:5},
+      {label:'Inspire — nível 2',duration:6},{label:'Suspenda',duration:6},{label:'Expire',duration:6},
+      {label:'Inspire — nível 3',duration:7},{label:'Suspenda',duration:7},{label:'Expire',duration:7},
+      {label:'Inspire — nível 4',duration:8},{label:'Suspenda',duration:8},{label:'Expire',duration:8},
+      {label:'Inspire — nível 5',duration:9},{label:'Suspenda',duration:9},{label:'Expire',duration:9},
+      {label:'Inspire — nível 6',duration:10},{label:'Suspenda',duration:10},{label:'Expire',duration:10},
+    ],
+    defaultRounds:1, roundsLabel:'sequência completa', doneSub:'O appoggio está ativo. A coluna de ar, sustentada.',
   },
   anapana: {
     name:'Anapanasati', sub:'Atenção plena ao sopro', origin:'Índia / Tailândia · Vipassana', color:'cool',
