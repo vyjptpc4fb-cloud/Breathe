@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Respiração</title>
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#f5f0e8">
+<meta name="theme-color" content="#f5f0e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13100c" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Breathe">
@@ -22,6 +23,19 @@
     --accent-earth: #6a7a4a;
     --accent-wim: #7a4a8a;
     --paper: #faf8f3;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #13100c;
+      --ink: #e8e0d0;
+      --muted: #a09070;
+      --accent-warm: #d4834a;
+      --accent-cool: #5a8a9a;
+      --accent-earth: #7a8a5a;
+      --accent-wim: #9a6aaa;
+      --paper: #1e1810;
+    }
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -514,14 +528,14 @@
 </div>
 
 <!-- FARINELLI -->
-<div class="section-label" style="margin-top:10px"><span class="effect-dot dot-warm"></span> canto · bel canto · apoio vocal</div>
+<div class="section-label" style="margin-top:10px"><span class="effect-dot dot-warm"></span> canto · bel canto · suporte vocal</div>
 <div class="cards-1">
 
   <div class="card card-h" onclick="open_('farinelli')">
     <div class="card-left">
       <div class="card-tag">Europa · Bel Canto · Séc. XVIII</div>
       <div class="card-name">Respiração Farinelli</div>
-      <div class="card-sub">Apoio e sustentação vocal</div>
+      <div class="card-sub">Suporte e sustentação vocal</div>
       <div class="card-pattern">
         <span class="phase-pill">inspire 5→10s</span>
         <span class="phase-pill">suspenda 5→10s</span>
@@ -862,7 +876,7 @@ const P = {
     defaultRounds:10, roundsLabel:'ciclos (≈ 3 min)', doneSub:'O nervo vago responde com profundidade. Calma estável.',
   },
   farinelli: {
-    name:'Respiração Farinelli', sub: 'Apoio e sustentação vocal', origin:'Europa · Bel Canto · Séc. XVIII', color:'warm',
+    name:'Respiração Farinelli', sub:'Suporte e sustentação vocal', origin:'Europa · Bel Canto · Séc. XVIII', color:'warm',
     instructions:'Seis níveis progressivos de 5 a 10 tempos, segundo Richard Miller (The Structure of Singing). Inspire — Suspenda — Expire, sempre simétrico. Nas contagens maiores, a inspiração acontece em platôs: micro-suspensões dentro da própria fase inspiratória, sem expirar. É a respiração de dedal de Lamperti. Appoggio ativo, sem tensão visível no pescoço ou ombros.',
     phases:[
       {label:'Inspire — nível 1',duration:5},{label:'Suspenda',duration:5},{label:'Expire',duration:5},
