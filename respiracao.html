@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Respiração</title>
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#f5f0e8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#13100c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f0e8">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Breathe">
@@ -23,19 +22,6 @@
     --accent-earth: #6a7a4a;
     --accent-wim: #7a4a8a;
     --paper: #faf8f3;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #13100c;
-      --ink: #e8e0d0;
-      --muted: #a09070;
-      --accent-warm: #d4834a;
-      --accent-cool: #5a8a9a;
-      --accent-earth: #7a8a5a;
-      --accent-wim: #9a6aaa;
-      --paper: #1e1810;
-    }
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -497,6 +483,20 @@
 <div class="section-label" style="margin-top:10px"><span class="effect-dot dot-earth"></span> expiração prolongada · ativação vagal</div>
 <div class="cards-1">
 
+  <div class="card earth card-h" onclick="open_('prolongada3')">
+    <div class="card-left">
+      <div class="card-tag">Universal · Grounding</div>
+      <div class="card-name">Expiração Prolongada</div>
+      <div class="card-sub">3s · 6s</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 3s</span><span class="phase-pill">expire 6s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Versão de iniciação. Expirar o dobro da inspiração aciona o nervo vago com suavidade. Boa porta de entrada para quem ainda não pratica respiração controlada.</div>
+    </div>
+  </div>
+
   <div class="card earth card-h" onclick="open_('prolongada')">
     <div class="card-left">
       <div class="card-tag">Universal · Grounding</div>
@@ -527,15 +527,74 @@
 
 </div>
 
+<!-- JU FRANCO -->
+<div class="section-label" style="margin-top:10px"><span class="effect-dot dot-warm"></span> canto · pedagogia vocal · Ju Franco</div>
+<div class="cards-1">
+
+  <div class="card card-h" onclick="open_('jufranco1')">
+    <div class="card-left">
+      <div class="card-tag">Pedagogia Vocal · Ju Franco</div>
+      <div class="card-name">Exercício 1</div>
+      <div class="card-sub">Inspira · fluxo · solta</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 3</span>
+        <span class="phase-pill">S ou x 3</span>
+        <span class="phase-pill">solta</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Inspira em 3 tempos, libera fluxo de ar controlado (S ou x) em 3 tempos, solta. Iniciação ao gerenciamento da coluna de ar.</div>
+    </div>
+  </div>
+
+  <div class="card card-h" onclick="open_('jufranco2')">
+    <div class="card-left">
+      <div class="card-tag">Pedagogia Vocal · Ju Franco</div>
+      <div class="card-name">Exercício 2</div>
+      <div class="card-sub">Inspira · fluxo · segura · fluxo · solta</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 3</span>
+        <span class="phase-pill">S ou x 3</span>
+        <span class="phase-pill">segura 3</span>
+        <span class="phase-pill">S ou x 3</span>
+        <span class="phase-pill">solta</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Adiciona uma retenção entre os fluxos de ar. Treina a suspensão do ar e o retorno ao controle do fluxo.</div>
+    </div>
+  </div>
+
+  <div class="card card-h" onclick="open_('jufranco3')">
+    <div class="card-left">
+      <div class="card-tag">Pedagogia Vocal · Ju Franco</div>
+      <div class="card-name">Exercício 3</div>
+      <div class="card-sub">Inspira · fluxo · segura · fluxo · segura · solta</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 3</span>
+        <span class="phase-pill">S ou x 3</span>
+        <span class="phase-pill">segura 3</span>
+        <span class="phase-pill">S ou x 3</span>
+        <span class="phase-pill">segura 3</span>
+        <span class="phase-pill">solta</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Versão mais complexa com duas retenções. Máximo controle da coluna de ar em múltiplos gestos suspensos antes da soltura final.</div>
+    </div>
+  </div>
+
+</div>
+
 <!-- FARINELLI -->
-<div class="section-label" style="margin-top:10px"><span class="effect-dot dot-warm"></span> canto · bel canto · suporte vocal</div>
+<div class="section-label" style="margin-top:10px"><span class="effect-dot dot-warm"></span> canto · bel canto · apoio vocal</div>
 <div class="cards-1">
 
   <div class="card card-h" onclick="open_('farinelli')">
     <div class="card-left">
       <div class="card-tag">Europa · Bel Canto · Séc. XVIII</div>
       <div class="card-name">Respiração Farinelli</div>
-      <div class="card-sub">Suporte e sustentação vocal</div>
+      <div class="card-sub">Apoio e sustentação vocal</div>
       <div class="card-pattern">
         <span class="phase-pill">inspire 5→10s</span>
         <span class="phase-pill">suspenda 5→10s</span>
@@ -863,6 +922,12 @@ const P = {
     phases:[{label:'Inspire',duration:4},{label:'Retenção',duration:7},{label:'Expire',duration:8}],
     defaultRounds:6, roundsLabel:'ciclos', doneSub:'O nervo vago responde. O cortisol cede.',
   },
+  prolongada3: {
+    name:'Expiração Prolongada', sub:'3s · 6s', origin:'Universal · Grounding', color:'earth',
+    instructions:'Inspire suavemente pelo nariz por 3 segundos. Expire lentamente pelo nariz por 6 segundos — o dobro do tempo. Versão de iniciação, suave e acessível.',
+    phases:[{label:'Inspire',duration:3},{label:'Expire — longo',duration:6}],
+    defaultRounds:20, roundsLabel:'ciclos (≈ 3 min)', doneSub:'O nervo vago acalma. A âncora foi lançada.',
+  },
   prolongada: {
     name:'Expiração Prolongada', sub:'4s · 8s', origin:'Universal · Grounding', color:'earth',
     instructions:'Inspire suavemente pelo nariz por 4 segundos. Expire lentamente pelo nariz por 8 segundos — o dobro do tempo. Pode ser feita em qualquer posição, a qualquer momento.',
@@ -876,7 +941,7 @@ const P = {
     defaultRounds:10, roundsLabel:'ciclos (≈ 3 min)', doneSub:'O nervo vago responde com profundidade. Calma estável.',
   },
   farinelli: {
-    name:'Respiração Farinelli', sub:'Suporte e sustentação vocal', origin:'Europa · Bel Canto · Séc. XVIII', color:'warm',
+    name:'Respiração Farinelli', sub:'Apoio e sustentação vocal', origin:'Europa · Bel Canto · Séc. XVIII', color:'warm',
     instructions:'Seis níveis progressivos de 5 a 10 tempos, segundo Richard Miller (The Structure of Singing). Inspire — Suspenda — Expire, sempre simétrico. Nas contagens maiores, a inspiração acontece em platôs: micro-suspensões dentro da própria fase inspiratória, sem expirar. É a respiração de dedal de Lamperti. Appoggio ativo, sem tensão visível no pescoço ou ombros.',
     phases:[
       {label:'Inspire — nível 1',duration:5},{label:'Suspenda',duration:5},{label:'Expire',duration:5},
@@ -887,6 +952,24 @@ const P = {
       {label:'Inspire — nível 6',duration:10},{label:'Suspenda',duration:10},{label:'Expire',duration:10},
     ],
     defaultRounds:1, roundsLabel:'sequência completa', doneSub:'O appoggio está ativo. A coluna de ar, sustentada.',
+  },
+  jufranco1: {
+    name:'Exercício 1', sub:'Inspira · fluxo · solta', origin:'Pedagogia Vocal · Ju Franco', color:'warm',
+    instructions:'Inspira em 3 tempos. Libera fluxo de ar controlado em S ou x por 3 tempos. Solta. O S ou x é uma fricativa contínua — não é apneia, é ar em movimento controlado.',
+    phases:[{label:'Inspire',duration:3},{label:'S ou x — fluxo',duration:3},{label:'Solta',duration:1}],
+    defaultRounds:8, roundsLabel:'repetições', doneSub:'A coluna de ar encontrou seu fluxo.',
+  },
+  jufranco2: {
+    name:'Exercício 2', sub:'Inspira · fluxo · segura · fluxo · solta', origin:'Pedagogia Vocal · Ju Franco', color:'warm',
+    instructions:'Inspira em 3 tempos. S ou x por 3. Segura por 3 — suspensão ativa, não colapso. S ou x por 3. Solta. Treina a retomada do fluxo depois da suspensão.',
+    phases:[{label:'Inspire',duration:3},{label:'S ou x — fluxo',duration:3},{label:'Segura',duration:3},{label:'S ou x — fluxo',duration:3},{label:'Solta',duration:1}],
+    defaultRounds:6, roundsLabel:'repetições', doneSub:'Suspensão e fluxo em equilíbrio.',
+  },
+  jufranco3: {
+    name:'Exercício 3', sub:'Inspira · fluxo · segura · fluxo · segura · solta', origin:'Pedagogia Vocal · Ju Franco', color:'warm',
+    instructions:'Inspira em 3 tempos. S ou x por 3. Segura por 3. S ou x por 3. Segura por 3. Solta. Máximo controle da coluna de ar em múltiplos gestos suspensos. Exige as versões anteriores bem incorporadas.',
+    phases:[{label:'Inspire',duration:3},{label:'S ou x — fluxo',duration:3},{label:'Segura',duration:3},{label:'S ou x — fluxo',duration:3},{label:'Segura',duration:3},{label:'Solta',duration:1}],
+    defaultRounds:5, roundsLabel:'repetições', doneSub:'A coluna de ar, dominada. O instrumento, pronto.',
   },
   anapana: {
     name:'Anapanasati', sub:'Atenção plena ao sopro', origin:'Índia / Tailândia · Vipassana', color:'cool',
