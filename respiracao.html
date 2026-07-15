@@ -648,6 +648,20 @@
 <div class="section-label" style="margin-top:10px"><span class="effect-dot dot-cool"></span> calmante · equilíbrio · grounding</div>
 <div class="cards-1">
 
+  <div class="card cool card-h" onclick="open_('bhramari')">
+    <div class="card-left">
+      <div class="card-tag">Índia · Hatha Yoga · Pranayama</div>
+      <div class="card-name">Bhramari</div>
+      <div class="card-sub">Respiração da Abelha</div>
+      <div class="card-pattern">
+        <span class="phase-pill">inspire 4s</span><span class="phase-pill">humming 12s</span>
+      </div>
+    </div>
+    <div class="card-right">
+      <div class="card-effect">Inspire e ao expirar faça um zumbido suave e contínuo. A vibração ressoa no crânio e ativa o nervo vago diretamente. Profundamente calmante, reduz ansiedade e pressão arterial.</div>
+    </div>
+  </div>
+
   <div class="card cool card-h" onclick="open_('nadishodhana')">
     <div class="card-left">
       <div class="card-tag">Índia · Pranayama</div>
@@ -1031,6 +1045,12 @@ const P = {
     instructions:'Visualize um canal de luz na coluna vertebral. Inspire sentindo energia subir da base ao topo da cabeça. Retenha no ápice. Expire descendo com serenidade.',
     phases:[{label:'Inspire — sobe',duration:6},{label:'Retenção — ápice',duration:6},{label:'Expire — desce',duration:6}],
     defaultRounds:7, roundsLabel:'ciclos', doneSub:'O canal central, iluminado. Corpo e mente, integrados.',
+  },
+  bhramari: {
+    name:'Bhramari', sub:'Respiração da Abelha', origin:'Índia · Hatha Yoga · Pranayama', color:'cool',
+    instructions:'Inspire pelo nariz por 4 segundos. Feche suavemente os ouvidos com os polegares e os olhos com os dedos. Ao expirar, faça um zumbido suave e contínuo — como uma abelha — pelo tempo que for confortável, até 12 segundos. Sinta a vibração ressoar no crânio e no peito.',
+    phases:[{label:'Inspire',duration:4},{label:'Humming — zumbido',duration:12}],
+    defaultRounds:7, roundsLabel:'ciclos', doneSub:'A vibração acalma. O sistema nervoso encontrou seu centro.',
   },
   wimhof: {
     name:'Wim Hof', sub:'Hiperventilação + Retenção Progressiva', origin:'Holanda · Método Wim Hof', color:'wim',
