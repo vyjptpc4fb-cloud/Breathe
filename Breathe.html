@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -692,7 +692,7 @@
       </div>
     </div>
     <div class="card-right">
-      <div class="card-effect">O ritmo de 5,5 breaths per minute é apontado por Nestor como o ideal para o ser humano — sincroniza coração, pulmões e sistema nervoso com precisão máxima.</div>
+      <div class="card-effect">The rhythm of 5.5 breaths per minute is identified by Nestor as ideal for humans — synchronizes heart, lungs and nervous system with maximum precision.</div>
     </div>
   </div>
 
@@ -771,9 +771,9 @@
         </div>
       </div>
       <div class="wim-rounds-preview">
-        <div class="wim-round-chip">Rodada 1 · meta 1 min</div>
-        <div class="wim-round-chip">Rodada 2 · meta 1,5 min</div>
-        <div class="wim-round-chip">Rodada 3 · meta 2 min</div>
+        <div class="wim-round-chip">Round 1 · goal 1 min</div>
+        <div class="wim-round-chip">Round 2 · goal 1.5 min</div>
+        <div class="wim-round-chip">Round 3 · goal 2 min</div>
       </div>
     </div>
   </div>
@@ -848,7 +848,7 @@
       <div class="circle-inner">
         <div id="phase-label">—</div>
         <div id="count-display">0</div>
-        <div id="unit-label">seg</div>
+        <div id="unit-label">sec</div>
       </div>
     </div>
 
@@ -940,7 +940,7 @@ const P = {
   },
   coherent: {
     name:'Coerência Cardíaca', sub:'5 breaths per minute', origin:'Coherent Breathing', color:'earth',
-    instructions:'Inspire suavemente pelo nariz por 5 seconds. Expire suavemente por 5 seconds. Não force — apenas flua. O ritmo sincroniza coração, pulmões e cérebro.',
+    instructions:'Inhale softly through the nose for 5 seconds. Exhale softly for 5 seconds. Do not force — just flow. The rhythm synchronizes heart, lungs and brain.',
     phases:[{label:'Inhale',duration:5},{label:'Exhale',duration:5}],
     defaultRounds:18, roundsLabel:'breaths (≈ 3 min)', doneSub:'Coherence restored. Heart and mind speak the same language.',
   },
@@ -995,19 +995,19 @@ const P = {
     defaultRounds:1, roundsLabel:'sequência completa', doneSub:'O appoggio está ativo. A coluna de ar, sustentada.',
   },
   jufranco1: {
-    name:'Exercício 1', sub:'Inhale · airflow · release — 6 counts', origin:'Vocal Pedagogy · Ju Franco', color:'warm',
+    name:'Exercise 1', sub:'Inhale · airflow · release — 6 counts', origin:'Vocal Pedagogy · Ju Franco', color:'warm',
     instructions:'Inhale for 6 counts. Release controlled airflow as S or x for 6 counts. Release. The S or x is a continuous fricative — not apnea, it is air in controlled motion.',
     phases:[{label:'Inhale',duration:6},{label:'S or x — airflow',duration:6},{label:'Release',duration:1}],
     defaultRounds:8, roundsLabel:'repetições', doneSub:'A coluna de ar encontrou seu fluxo.',
   },
   jufranco2: {
-    name:'Exercício 2', sub:'Inhale · airflow · hold · airflow · release — 6 counts', origin:'Vocal Pedagogy · Ju Franco', color:'warm',
+    name:'Exercise 2', sub:'Inhale · airflow · hold · airflow · release — 6 counts', origin:'Vocal Pedagogy · Ju Franco', color:'warm',
     instructions:'Inhale for 6 counts. S or x for 6. Hold for 6 — active suspension, not collapse. S or x for 6. Release. Trains returning to flow after suspension.',
     phases:[{label:'Inhale',duration:3},{label:'S or x — airflow',duration:3},{label:'Segura',duration:3},{label:'S or x — airflow',duration:3},{label:'Release',duration:1}],
     defaultRounds:6, roundsLabel:'repetições', doneSub:'Suspensão e fluxo em equilíbrio.',
   },
   jufranco3: {
-    name:'Exercício 3', sub:'Inhale · airflow · hold · airflow · hold · release — 6 counts', origin:'Vocal Pedagogy · Ju Franco', color:'warm',
+    name:'Exercise 3', sub:'Inhale · airflow · hold · airflow · hold · release — 6 counts', origin:'Vocal Pedagogy · Ju Franco', color:'warm',
     instructions:'Inhale for 6 counts. S or x for 6. Hold for 6. S or x for 6. Hold for 6. Release. Maximum airflow control across multiple suspended gestures. Requires the previous versions well incorporated in the body.',
     phases:[{label:'Inhale',duration:3},{label:'S or x — airflow',duration:3},{label:'Segura',duration:3},{label:'S or x — airflow',duration:3},{label:'Segura',duration:3},{label:'Release',duration:1}],
     defaultRounds:5, roundsLabel:'repetições', doneSub:'A coluna de ar, dominada. O instrumento, pronto.',
@@ -1033,7 +1033,7 @@ const P = {
   wimhof: {
     name:'Wim Hof', sub:'Hiperventilação + Retenção Progressiva', origin:'Netherlands · Wim Hof Method', color:'wim',
     isWim:true,
-    instructions:'Deite-se ou sente-se. 30 respirações profundas rápidas, depois expire tudo e prenda. Aperte "inspirar de volta" quando sentir necessidade. 3 rodadas com metas crescentes.',
+    instructions:'Lie down or sit comfortably. 30 deep rapid breaths, then exhale fully and hold. Press "breathe in" when you need to. 3 rounds with progressive goals.',
     breaths:30, retGoals:[60,90,120],
     defaultRounds:3, roundsLabel:'rounds', doneSub:'Nervous system activated and reset. Clear mind.',
   },
@@ -1045,7 +1045,7 @@ const P = {
   },
   bhastrika: {
     name:'Bhastrika', sub:'Bellows', origin:'India · Hatha Yoga', color:'warm',
-    instructions:'Inspire com força enchendo o peito, expire com força esvaziando. Ritmo vigoroso e controlado. Pause 30s entre rodadas.',
+    instructions:'Inhale forcefully filling the chest, exhale forcefully emptying it. Vigorous and controlled rhythm. Pause 30s between rounds.',
     phases:[{label:'Inhale',duration:2},{label:'Exhale',duration:2}],
     defaultRounds:10, roundsLabel:'breaths', doneSub:'Energy activated. The body warms.',
   },
@@ -1202,13 +1202,13 @@ function toggleTimer(){ running ? pauseT() : startT(); }
 function pauseT(){
   clearInterval(ticker); clearInterval(wimRet); running=false;
   releaseWakeLock();
-  document.getElementById('ss-btn').textContent='continuar';
+  document.getElementById('ss-btn').textContent='continue';
 }
 
 function startT(){
   try{ if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)(); if(audioCtx.state==='suspended') audioCtx.resume(); }catch(e){}
   running=true; acquireWakeLock();
-  document.getElementById('ss-btn').textContent='pausar';
+  document.getElementById('ss-btn').textContent='pause';
   if(cur.isWim){ startWim(); }
   else{ if(timeLeft<=0) timeLeft=cur.phases[phaseIdx].duration; ticker=setInterval(tick,50); }
 }
