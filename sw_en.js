@@ -1,4 +1,4 @@
-const CACHE = 'breathe-en-v1';
+const CACHE = 'breathe-en-v2';
 const ASSETS = [
   './Breathe.html',
   './manifest_en.json',
