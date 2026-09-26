@@ -2,10 +2,11 @@
   "name": "Breathe",
   "short_name": "Breathe",
   "description": "Breathing practices from Eastern traditions",
+  "lang": "en",
   "start_url": "./Breathe.html",
   "display": "standalone",
   "background_color": "#f5f0e8",
-  "theme_color": "#4a7a8a",
+  "theme_color": "#f5f0e8",
   "orientation": "portrait",
   "icons": [
     {
