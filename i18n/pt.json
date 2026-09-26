@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "docTitle": "Breathe",
+    "headerTitle": "Práticas de Respiração",
+    "headerSubtitle": "manhãs, tradições orientais",
+    "sections": {
+      "box": "respiração quadrada · variações",
+      "exhale": "expiração prolongada · ativação vagal",
+      "voice1": "canto · bel canto · suporte vocal",
+      "voice2": "canto · pedagogia vocal · Ju Franco",
+      "calm": "calmante · equilíbrio · grounding",
+      "wim": "método wim hof · retenção progressiva",
+      "energize": "energizante"
+    },
+    "back": "← voltar",
+    "hearInstructions": "▶ ouvir instruções",
+    "retentionLabel": "retenção — pulmões vazios",
+    "secondsUnit": "segundos",
+    "secUnit": "seg",
+    "breatheInBtn": "inspirar de volta →",
+    "roundsColon": "rodadas:",
+    "reset": "reiniciar",
+    "start": "iniciar",
+    "pause": "pausar",
+    "continue": "continuar",
+    "practiceComplete": "Prática concluída",
+    "repeat": "repetir",
+    "otherPractices": "outras práticas",
+    "deepBreath": "Respiração profunda",
+    "recoveryBreath": "Respiração de recuperação",
+    "breathsUnit": "respirações",
+    "roundWord": "Rodada",
+    "retention": "Retenção",
+    "recovery": "Recuperação",
+    "goalLabel": "meta",
+    "speechLang": "pt-BR",
+    "voiceNameHint": "Luciana"
+  },
+  "practices": {
+    "taoist": {
+      "section": "box",
+      "color": "cool",
+      "tag": "China · Taoismo · Qi Gong",
+      "name": "Quadrada 4-4-4-4",
+      "sub": "Si Fang Hu Xi",
+      "pattern": [
+        "inspire 4s",
+        "retenção 4s",
+        "expire 4s",
+        "vazio 4s"
+      ],
+      "effect": "Quatro fases iguais criam ritmo perfeito entre yin e yang. Harmoniza o qi, acalma o sistema nervoso, traz equanimidade. Base da meditação taoísta.",
+      "timerSub": "Si Fang Hu Xi · Taoismo",
+      "origin": "China · Taoismo · Qi Gong",
+      "instructions": "Quatro fases iguais de 4 segundos. Inspire · Retenção plena · Expire · Vazio. Observe o silêncio nos espaços entre os movimentos do ar.",
+      "roundsLabel": "ciclos",
+      "defaultRounds": 8,
+      "doneSub": "O qi circula. Yin e yang em equilíbrio.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 4
+        },
+        {
+          "label": "Retenção plena",
+          "duration": 4
+        },
+        {
+          "label": "Expire",
+          "duration": 4
+        },
+        {
+          "label": "Vazio",
+          "duration": 4
+        }
+      ]
+    },
+    "quadrada6": {
+      "section": "box",
+      "color": "cool",
+      "tag": "China · Taoismo · Qi Gong",
+      "name": "Quadrada 6-6-6-6",
+      "sub": "Ritmo aprofundado",
+      "pattern": [
+        "inspire 6s",
+        "retenção 6s",
+        "expire 6s",
+        "vazio 6s"
+      ],
+      "effect": "A mesma estrutura quadrada com tempos mais longos. Aprofunda a atenção e o silêncio interno. Boa para quando a prática de 4s já está incorporada.",
+      "timerSub": "Ritmo aprofundado",
+      "origin": "China · Taoismo · Qi Gong",
+      "instructions": "Quatro fases iguais de 6 segundos. Inspire · Retenção plena · Expire · Vazio. Permita que cada fase se aprofunde naturalmente.",
+      "roundsLabel": "ciclos",
+      "defaultRounds": 6,
+      "doneSub": "O silêncio se aprofunda. O qi flui com calma.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 6
+        },
+        {
+          "label": "Retenção plena",
+          "duration": 6
+        },
+        {
+          "label": "Expire",
+          "duration": 6
+        },
+        {
+          "label": "Vazio",
+          "duration": 6
+        }
+      ]
+    },
+    "quadrada8": {
+      "section": "box",
+      "color": "cool",
+      "tag": "China · Taoismo · Qi Gong",
+      "name": "Quadrada 8-8-8-8",
+      "sub": "Ritmo meditativo",
+      "pattern": [
+        "inspire 8s",
+        "retenção 8s",
+        "expire 8s",
+        "vazio 8s"
+      ],
+      "effect": "Nível avançado. A retenção longa e o vazio prolongado criam estados de profunda quietude. Exige prática anterior com versões menores.",
+      "timerSub": "Ritmo meditativo",
+      "origin": "China · Taoismo · Qi Gong",
+      "instructions": "Quatro fases iguais de 8 segundos. Inspire · Retenção plena · Expire · Vazio. Pratique apenas se as versões menores já estiverem confortáveis.",
+      "roundsLabel": "ciclos",
+      "defaultRounds": 5,
+      "doneSub": "A quietude se instalou. O corpo encontrou seu centro.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 8
+        },
+        {
+          "label": "Retenção plena",
+          "duration": 8
+        },
+        {
+          "label": "Expire",
+          "duration": 8
+        },
+        {
+          "label": "Vazio",
+          "duration": 8
+        }
+      ]
+    },
+    "quadrada10": {
+      "section": "box",
+      "color": "cool",
+      "tag": "China · Taoismo · Qi Gong",
+      "name": "Quadrada 10-10-10-10",
+      "sub": "Ritmo contemplativo",
+      "pattern": [
+        "inspire 10s",
+        "retenção 10s",
+        "expire 10s",
+        "vazio 10s"
+      ],
+      "effect": "Prática contemplativa profunda. Cada ciclo dura 40 segundos. Só para quem já tem as versões anteriores bem estabelecidas no corpo.",
+      "timerSub": "Ritmo contemplativo",
+      "origin": "China · Taoismo · Qi Gong",
+      "instructions": "Quatro fases iguais de 10 segundos. Cada ciclo dura 40 segundos. Apenas para praticantes experientes. Inspire · Retenção · Expire · Vazio com plena atenção.",
+      "roundsLabel": "ciclos",
+      "defaultRounds": 4,
+      "doneSub": "Contemplação profunda. O tempo se expandiu.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 10
+        },
+        {
+          "label": "Retenção plena",
+          "duration": 10
+        },
+        {
+          "label": "Expire",
+          "duration": 10
+        },
+        {
+          "label": "Vazio",
+          "duration": 10
+        }
+      ]
+    },
+    "prolongada3": {
+      "section": "exhale",
+      "color": "earth",
+      "tag": "Universal · Grounding",
+      "name": "Expiração Prolongada",
+      "sub": "3s · 6s",
+      "pattern": [
+        "inspire 3s",
+        "expire 6s"
+      ],
+      "effect": "Versão de iniciação. Expirar o dobro da inspiração aciona o nervo vago com suavidade. Boa porta de entrada para quem ainda não pratica respiração controlada.",
+      "timerSub": "3s · 6s",
+      "origin": "Universal · Grounding",
+      "instructions": "Inspire suavemente pelo nariz por 3 segundos. Expire lentamente pelo nariz por 6 segundos — o dobro do tempo. Versão de iniciação, suave e acessível.",
+      "roundsLabel": "ciclos (≈ 3 min)",
+      "defaultRounds": 20,
+      "doneSub": "O nervo vago acalma. A âncora foi lançada.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 3
+        },
+        {
+          "label": "Expire — longo",
+          "duration": 6
+        }
+      ]
+    },
+    "prolongada": {
+      "section": "exhale",
+      "color": "earth",
+      "tag": "Universal · Grounding",
+      "name": "Expiração Prolongada",
+      "sub": "4s · 8s",
+      "pattern": [
+        "inspire 4s",
+        "expire 8s"
+      ],
+      "effect": "Expirar o dobro do tempo da inspiração aciona o nervo vago e desacelera o coração. Âncora imediata nos momentos de turbulência. Versão de entrada.",
+      "timerSub": "4s · 8s",
+      "origin": "Universal · Grounding",
+      "instructions": "Inspire suavemente pelo nariz por 4 segundos. Expire lentamente pelo nariz por 8 segundos — o dobro do tempo. Pode ser feita em qualquer posição, a qualquer momento.",
+      "roundsLabel": "ciclos (≈ 3 min)",
+      "defaultRounds": 15,
+      "doneSub": "O nervo vago acalma. A âncora foi lançada.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 4
+        },
+        {
+          "label": "Expire — longo",
+          "duration": 8
+        }
+      ]
+    },
+    "prolongada6": {
+      "section": "exhale",
+      "color": "earth",
+      "tag": "Universal · Grounding",
+      "name": "Expiração Prolongada",
+      "sub": "6s · 12s",
+      "pattern": [
+        "inspire 6s",
+        "expire 12s"
+      ],
+      "effect": "Versão aprofundada. A expiração mais longa intensifica a ativação vagal e cria um estado de calma ainda mais estável. Para quando o corpo já conhece o ritmo de 4-8.",
+      "timerSub": "6s · 12s",
+      "origin": "Universal · Grounding",
+      "instructions": "Inspire suavemente pelo nariz por 6 segundos. Expire lentamente pelo nariz por 12 segundos. Versão aprofundada — a expiração mais longa intensifica a ativação vagal e cria calma mais estável.",
+      "roundsLabel": "ciclos (≈ 3 min)",
+      "defaultRounds": 10,
+      "doneSub": "O nervo vago responde com profundidade. Calma estável.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 6
+        },
+        {
+          "label": "Expire — longo",
+          "duration": 12
+        }
+      ]
+    },
+    "farinelli": {
+      "section": "voice1",
+      "color": "warm",
+      "tag": "Europa · Bel Canto · Séc. XVIII",
+      "name": "Respiração Farinelli",
+      "sub": "Suporte e sustentação vocal",
+      "pattern": [
+        "inspire 5→10s",
+        "suspenda 5→10s",
+        "expire 5→10s"
+      ],
+      "effect": "Atribuída a Farinelli e ao método de Porpora. Seis níveis progressivos treinam o <em>appoggio</em> — suporte ativo sem tensão. Nas contagens maiores, a inspiração se faz em platôs: a respiração de dedal de Lamperti.",
+      "timerSub": "Apoio e sustentação vocal",
+      "origin": "Europa · Bel Canto · Séc. XVIII",
+      "instructions": "Seis níveis progressivos de 5 a 10 tempos, segundo Richard Miller (The Structure of Singing). Inspire — Suspenda — Expire, sempre simétrico. Nas contagens maiores, a inspiração acontece em platôs: micro-suspensões dentro da própria fase inspiratória, sem expirar. É a respiração de dedal de Lamperti. Appoggio ativo, sem tensão visível no pescoço ou ombros.",
+      "roundsLabel": "sequência completa",
+      "defaultRounds": 1,
+      "doneSub": "O appoggio está ativo. A coluna de ar, sustentada.",
+      "phases": [
+        {
+          "label": "Inspire — nível 1",
+          "duration": 5
+        },
+        {
+          "label": "Suspenda",
+          "duration": 5
+        },
+        {
+          "label": "Expire",
+          "duration": 5
+        },
+        {
+          "label": "Inspire — nível 2",
+          "duration": 6
+        },
+        {
+          "label": "Suspenda",
+          "duration": 6
+        },
+        {
+          "label": "Expire",
+          "duration": 6
+        },
+        {
+          "label": "Inspire — nível 3",
+          "duration": 7
+        },
+        {
+          "label": "Suspenda",
+          "duration": 7
+        },
+        {
+          "label": "Expire",
+          "duration": 7
+        },
+        {
+          "label": "Inspire — nível 4",
+          "duration": 8
+        },
+        {
+          "label": "Suspenda",
+          "duration": 8
+        },
+        {
+          "label": "Expire",
+          "duration": 8
+        },
+        {
+          "label": "Inspire — nível 5",
+          "duration": 9
+        },
+        {
+          "label": "Suspenda",
+          "duration": 9
+        },
+        {
+          "label": "Expire",
+          "duration": 9
+        },
+        {
+          "label": "Inspire — nível 6",
+          "duration": 10
+        },
+        {
+          "label": "Suspenda",
+          "duration": 10
+        },
+        {
+          "label": "Expire",
+          "duration": 10
+        }
+      ]
+    },
+    "jufranco1": {
+      "section": "voice2",
+      "color": "warm",
+      "tag": "Pedagogia Vocal · Ju Franco",
+      "name": "Exercício 1",
+      "sub": "Inspira · fluxo · solta — 6 tempos",
+      "pattern": [
+        "inspire 6",
+        "S ou x 6",
+        "solta"
+      ],
+      "effect": "Inspira em 6 tempos, libera fluxo de ar controlado (S ou x) em 6 tempos, solta. Iniciação ao gerenciamento da coluna de ar.",
+      "timerSub": "Inspira · fluxo · solta — 6 tempos",
+      "origin": "Pedagogia Vocal · Ju Franco",
+      "instructions": "Inspira em 6 tempos. Libera fluxo de ar controlado em S ou x por 6 tempos. Solta. O S ou x é uma fricativa contínua — não é apneia, é ar em movimento controlado.",
+      "roundsLabel": "repetições",
+      "defaultRounds": 8,
+      "doneSub": "A coluna de ar encontrou seu fluxo.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 6
+        },
+        {
+          "label": "S ou x — fluxo",
+          "duration": 6
+        },
+        {
+          "label": "Solta",
+          "duration": 1
+        }
+      ]
+    },
+    "jufranco2": {
+      "section": "voice2",
+      "color": "warm",
+      "tag": "Pedagogia Vocal · Ju Franco",
+      "name": "Exercício 2",
+      "sub": "Inspira · fluxo · segura · fluxo · solta — 6 tempos",
+      "pattern": [
+        "inspire 6",
+        "S ou x 6",
+        "segura 6",
+        "S ou x 6",
+        "solta"
+      ],
+      "effect": "Adiciona uma retenção entre os fluxos de ar. Treina a suspensão do ar e o retorno ao controle do fluxo.",
+      "timerSub": "Inspira · fluxo · segura · fluxo · solta — 6 tempos",
+      "origin": "Pedagogia Vocal · Ju Franco",
+      "instructions": "Inspira em 6 tempos. S ou x por 6. Segura por 6 — suspensão ativa, não colapso. S ou x por 6. Solta. Treina a retomada do fluxo depois da suspensão.",
+      "roundsLabel": "repetições",
+      "defaultRounds": 6,
+      "doneSub": "Suspensão e fluxo em equilíbrio.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 3
+        },
+        {
+          "label": "S ou x — fluxo",
+          "duration": 3
+        },
+        {
+          "label": "Segura",
+          "duration": 3
+        },
+        {
+          "label": "S ou x — fluxo",
+          "duration": 3
+        },
+        {
+          "label": "Solta",
+          "duration": 1
+        }
+      ]
+    },
+    "jufranco3": {
+      "section": "voice2",
+      "color": "warm",
+      "tag": "Pedagogia Vocal · Ju Franco",
+      "name": "Exercício 3",
+      "sub": "Inspira · fluxo · segura · fluxo · segura · solta — 6 tempos",
+      "pattern": [
+        "inspire 6",
+        "S ou x 6",
+        "segura 6",
+        "S ou x 6",
+        "segura 6",
+        "solta"
+      ],
+      "effect": "Versão mais complexa com duas retenções. Máximo controle da coluna de ar em múltiplos gestos suspensos antes da soltura final.",
+      "timerSub": "Inspira · fluxo · segura · fluxo · segura · solta — 6 tempos",
+      "origin": "Pedagogia Vocal · Ju Franco",
+      "instructions": "Inspira em 6 tempos. S ou x por 6. Segura por 6. S ou x por 6. Segura por 6. Solta. Máximo controle da coluna de ar em múltiplos gestos suspensos. Exige as versões anteriores bem incorporadas.",
+      "roundsLabel": "repetições",
+      "defaultRounds": 5,
+      "doneSub": "A coluna de ar, dominada. O instrumento, pronto.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 3
+        },
+        {
+          "label": "S ou x — fluxo",
+          "duration": 3
+        },
+        {
+          "label": "Segura",
+          "duration": 3
+        },
+        {
+          "label": "S ou x — fluxo",
+          "duration": 3
+        },
+        {
+          "label": "Segura",
+          "duration": 3
+        },
+        {
+          "label": "Solta",
+          "duration": 1
+        }
+      ]
+    },
+    "bhramari": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "Índia · Hatha Yoga · Pranayama",
+      "name": "Bhramari",
+      "sub": "Respiração da Abelha",
+      "pattern": [
+        "inspire 4s",
+        "humming 12s"
+      ],
+      "effect": "Inspire e ao expirar faça um zumbido suave e contínuo. A vibração ressoa no crânio e ativa o nervo vago diretamente. Profundamente calmante, reduz ansiedade e pressão arterial.",
+      "timerSub": "Respiração da Abelha",
+      "origin": "Índia · Hatha Yoga · Pranayama",
+      "instructions": "Inspire pelo nariz por 4 segundos. Feche suavemente os ouvidos com os polegares e os olhos com os dedos. Ao expirar, faça um zumbido suave e contínuo — como uma abelha — pelo tempo que for confortável, até 12 segundos. Sinta a vibração ressoar no crânio e no peito.",
+      "roundsLabel": "ciclos",
+      "defaultRounds": 7,
+      "doneSub": "A vibração acalma. O sistema nervoso encontrou seu centro.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 4
+        },
+        {
+          "label": "Humming — zumbido",
+          "duration": 12
+        }
+      ]
+    },
+    "nadishodhana": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "Índia · Pranayama",
+      "name": "Nadi Shodhana",
+      "sub": "Narina Alternada",
+      "pattern": [
+        "inspire esquerda 4s",
+        "retenção 4s",
+        "expire direita 8s"
+      ],
+      "effect": "Equilibra os hemisférios cerebrais e os canais sutil e físico. Clareza mental, calma profunda. Excelente para iniciar o dia com centramento pleno.",
+      "timerSub": "Narina Alternada",
+      "origin": "Índia · Pranayama",
+      "instructions": "Mão direita: polegar fecha narina direita, anelar fecha narina esquerda. Inspire esquerda 4s → retenção 4s → expire direita 8s. Depois inspire direita 4s → retenção 4s → expire esquerda 8s. Isso é 1 ciclo completo.",
+      "roundsLabel": "ciclos completos",
+      "defaultRounds": 5,
+      "doneSub": "Os canais estão limpos. Equilíbrio restaurado.",
+      "phases": [
+        {
+          "label": "Inspire — esquerda",
+          "duration": 4
+        },
+        {
+          "label": "Retenção",
+          "duration": 4
+        },
+        {
+          "label": "Expire — direita",
+          "duration": 8
+        },
+        {
+          "label": "Inspire — direita",
+          "duration": 4
+        },
+        {
+          "label": "Retenção",
+          "duration": 4
+        },
+        {
+          "label": "Expire — esquerda",
+          "duration": 8
+        }
+      ]
+    },
+    "tanden": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "Japão · Zen · Aikido",
+      "name": "Tanden Kokyu",
+      "sub": "Respiração do Hara",
+      "pattern": [
+        "inspire 4s",
+        "expire 6s"
+      ],
+      "effect": "Dirige a respiração ao tanden — centro de força 3 dedos abaixo do umbigo. Enraizamento profundo, serenidade, estabilidade emocional.",
+      "timerSub": "Respiração do Hara",
+      "origin": "Japão · Zen · Aikido",
+      "instructions": "Coluna ereta. Atenção ao tanden — 3 dedos abaixo do umbigo. Inspire expandindo o abdômen como uma tigela. Expire lentamente, deixando o centro se recolher com calma.",
+      "roundsLabel": "ciclos",
+      "defaultRounds": 10,
+      "doneSub": "O centro está firme. A mente, quieta.",
+      "phases": [
+        {
+          "label": "Inspire — hara",
+          "duration": 4
+        },
+        {
+          "label": "Expire — lento",
+          "duration": 6
+        }
+      ]
+    },
+    "chandrabhedana": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "Índia · Pranayama",
+      "name": "Chandra Bhedana",
+      "sub": "Perfurando a Lua",
+      "pattern": [
+        "inspire esquerda 4s",
+        "retenção 4s",
+        "expire direita 8s"
+      ],
+      "effect": "Ativa o canal lunar (ida nadi). Refresca o corpo, acalma a mente agitada. Antídoto para ansiedade e calor interno excessivo.",
+      "timerSub": "Perfurando a Lua",
+      "origin": "Índia · Pranayama",
+      "instructions": "Tampe a narina direita com o polegar. Inspire pela narina esquerda (lunar, feminina). Tampe a esquerda com o anelar, expire pela direita.",
+      "roundsLabel": "ciclos",
+      "defaultRounds": 7,
+      "doneSub": "A lua acalma. O sistema refresca.",
+      "phases": [
+        {
+          "label": "Inspire — esquerda",
+          "duration": 4
+        },
+        {
+          "label": "Retenção",
+          "duration": 4
+        },
+        {
+          "label": "Expire — direita",
+          "duration": 8
+        }
+      ]
+    },
+    "nestor": {
+      "section": "calm",
+      "color": "earth",
+      "tag": "James Nestor · Respire",
+      "name": "Respiração 5,5",
+      "sub": "O ritmo ideal",
+      "pattern": [
+        "inspire 5,5s",
+        "expire 5,5s"
+      ],
+      "effect": "O ritmo de 5,5 respirações por minuto é apontado por Nestor como o ideal para o ser humano — sincroniza coração, pulmões e sistema nervoso com precisão máxima.",
+      "timerSub": "O ritmo ideal",
+      "origin": "James Nestor · Respire",
+      "instructions": "Inspire suavemente pelo nariz por 5,5 segundos, expandindo o abdômen. Expire suavemente pelo nariz por 5,5 segundos. Sem forçar — apenas flua. Este é o ritmo que a ciência aponta como ideal para o ser humano.",
+      "roundsLabel": "respirações (≈ 3 min)",
+      "defaultRounds": 16,
+      "doneSub": "O ritmo perfeito. O corpo encontrou seu compasso natural.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 5.5
+        },
+        {
+          "label": "Expire",
+          "duration": 5.5
+        }
+      ]
+    },
+    "coherent": {
+      "section": "calm",
+      "color": "earth",
+      "tag": "Respiração Coerente",
+      "name": "Coerência Cardíaca",
+      "sub": "5 respirações por minuto",
+      "pattern": [
+        "inspire 5s",
+        "expire 5s"
+      ],
+      "effect": "O ritmo de 5–6 respirações por minuto sincroniza coração, cérebro e sistema respiratório. Reduz ansiedade, estabiliza o humor. Pode ser feita em qualquer posição.",
+      "timerSub": "5 respirações por minuto",
+      "origin": "Respiração Coerente",
+      "instructions": "Inspire suavemente pelo nariz por 5 segundos. Expire suavemente por 5 segundos. Não force — apenas flua. O ritmo sincroniza coração, pulmões e cérebro.",
+      "roundsLabel": "respirações (≈ 3 min)",
+      "defaultRounds": 18,
+      "doneSub": "Coerência restaurada. O coração e a mente falam a mesma língua.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 5
+        },
+        {
+          "label": "Expire",
+          "duration": 5
+        }
+      ]
+    },
+    "478": {
+      "section": "calm",
+      "color": "earth",
+      "tag": "Dr. Andrew Weil",
+      "name": "Respiração 4-7-8",
+      "sub": "Relaxante do Sistema Nervoso",
+      "pattern": [
+        "inspire 4s",
+        "retenção 7s",
+        "expire 8s"
+      ],
+      "effect": "A longa retenção e a expiração prolongada ativam o nervo vago e o parassimpático. Reduz cortisol rapidamente. Excelente após despertar tenso ou ansioso.",
+      "timerSub": "Relaxante do Sistema Nervoso",
+      "origin": "Dr. Andrew Weil",
+      "instructions": "Expire todo o ar. Inspire pelo nariz contando 4. Prenda contando 7. Expire completamente pela boca contando 8. A proporção é o que importa.",
+      "roundsLabel": "ciclos",
+      "defaultRounds": 6,
+      "doneSub": "O nervo vago responde. O cortisol cede.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 4
+        },
+        {
+          "label": "Retenção",
+          "duration": 7
+        },
+        {
+          "label": "Expire",
+          "duration": 8
+        }
+      ]
+    },
+    "anapana": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "Índia · Tailândia · Vipassana",
+      "name": "Anapanasati",
+      "sub": "Atenção plena ao sopro",
+      "pattern": [
+        "inspire natural",
+        "expire natural"
+      ],
+      "effect": "A técnica ensinada pelo Buda: apenas observar a respiração natural, sem controle. O timer marca o tempo total. Cultiva presença, desapego e equanimidade.",
+      "timerSub": "Atenção plena ao sopro",
+      "origin": "Índia / Tailândia · Vipassana",
+      "instructions": "Não controle nada. Apenas observe o ar entrando e saindo pelas narinas. Quando a mente vagar, retorne gentilmente. O timer marca o tempo — a respiração é sua.",
+      "roundsLabel": "ciclos (aprox.)",
+      "defaultRounds": 12,
+      "doneSub": "O sopro é o mestre. A mente aprendeu a ouvir.",
+      "phases": [
+        {
+          "label": "Observe — inspire",
+          "duration": 4
+        },
+        {
+          "label": "Observe — expire",
+          "duration": 5
+        }
+      ]
+    },
+    "sushumna": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "Índia · Tantra · Pranayama",
+      "name": "Canal Central",
+      "sub": "Sushumna Kriya",
+      "pattern": [
+        "inspire 6s",
+        "retenção 6s",
+        "expire 6s"
+      ],
+      "effect": "Visualize energia subindo pela coluna enquanto inspira, pousando no ápice na retenção, e descendo com serenidade na expiração. Integração corpo-mente.",
+      "timerSub": "Sushumna Kriya",
+      "origin": "Índia · Tantra · Pranayama",
+      "instructions": "Visualize um canal de luz na coluna vertebral. Inspire sentindo energia subir da base ao topo da cabeça. Retenha no ápice. Expire descendo com serenidade.",
+      "roundsLabel": "ciclos",
+      "defaultRounds": 7,
+      "doneSub": "O canal central, iluminado. Corpo e mente, integrados.",
+      "phases": [
+        {
+          "label": "Inspire — sobe",
+          "duration": 6
+        },
+        {
+          "label": "Retenção — ápice",
+          "duration": 6
+        },
+        {
+          "label": "Expire — desce",
+          "duration": 6
+        }
+      ]
+    },
+    "kapalabhati": {
+      "section": "energize",
+      "color": "warm",
+      "tag": "Índia · Hatha Yoga",
+      "name": "Kapalabhati",
+      "sub": "Crânio Brilhante",
+      "pattern": [
+        "expire rápido",
+        "inspire passivo"
+      ],
+      "effect": "Expirações rápidas pelo nariz. Desperta, limpa, aquece.",
+      "timerSub": "Crânio Brilhante",
+      "origin": "Índia · Hatha Yoga",
+      "instructions": "Sente-se ereta. Contraia o abdômen para expirar com força pelo nariz. A inspiração é passiva e automática. Mantenha o rosto relaxado.",
+      "roundsLabel": "respirações",
+      "defaultRounds": 30,
+      "doneSub": "O crânio brilha. O prana desperta.",
+      "phases": [
+        {
+          "label": "Expire — força",
+          "duration": 0.5
+        },
+        {
+          "label": "Inspire — passivo",
+          "duration": 0.5
+        }
+      ]
+    },
+    "bhastrika": {
+      "section": "energize",
+      "color": "warm",
+      "tag": "Índia · Hatha Yoga",
+      "name": "Bhastrika",
+      "sub": "Fole",
+      "pattern": [
+        "inspire 2s",
+        "expire 2s"
+      ],
+      "effect": "Inspire e expire com força. Ativa o sistema nervoso simpático.",
+      "timerSub": "Fole",
+      "origin": "Índia · Hatha Yoga",
+      "instructions": "Inspire com força enchendo o peito, expire com força esvaziando. Ritmo vigoroso e controlado. Pause 30s entre rodadas.",
+      "roundsLabel": "respirações",
+      "defaultRounds": 10,
+      "doneSub": "Energia ativada. O corpo aquece.",
+      "phases": [
+        {
+          "label": "Inspire",
+          "duration": 2
+        },
+        {
+          "label": "Expire",
+          "duration": 2
+        }
+      ]
+    },
+    "ujjayi": {
+      "section": "energize",
+      "color": "warm",
+      "tag": "Índia · Ashtanga Yoga",
+      "name": "Ujjayi",
+      "sub": "Vitoriosa · Oceânica",
+      "pattern": [
+        "inspire 4s",
+        "expire 4s"
+      ],
+      "effect": "Respiração com som oceânico. Foco, presença, calor interno.",
+      "timerSub": "Vitoriosa · Oceânica",
+      "origin": "Índia · Ashtanga Yoga",
+      "instructions": "Inspire pelo nariz contraindo levemente a glote — som de oceano. Expire pelo nariz com o mesmo som suave. Sinta o calor interno se expandindo.",
+      "roundsLabel": "ciclos",
+      "defaultRounds": 8,
+      "doneSub": "O oceano interno se acalma.",
+      "phases": [
+        {
+          "label": "Inspire (glote)",
+          "duration": 4
+        },
+        {
+          "label": "Expire (glote)",
+          "duration": 4
+        }
+      ]
+    },
+    "suryabhedana": {
+      "section": "energize",
+      "color": "warm",
+      "tag": "Índia · Pranayama",
+      "name": "Surya Bhedana",
+      "sub": "Perfurando o Sol",
+      "pattern": [
+        "inspire direita 4s",
+        "expire esquerda 8s"
+      ],
+      "effect": "Só pela narina direita (solar). Energiza, aquece, ativa.",
+      "timerSub": "Perfurando o Sol",
+      "origin": "Índia · Pranayama",
+      "instructions": "Tampe a narina esquerda com o anelar. Inspire lentamente pela narina direita. Tampe a direita com o polegar, expire pela esquerda.",
+      "roundsLabel": "ciclos",
+      "defaultRounds": 7,
+      "doneSub": "O sol interior foi ativado.",
+      "phases": [
+        {
+          "label": "Inspire — direita",
+          "duration": 4
+        },
+        {
+          "label": "Retenção",
+          "duration": 4
+        },
+        {
+          "label": "Expire — esquerda",
+          "duration": 8
+        }
+      ]
+    },
+    "wimhof": {
+      "section": "wim",
+      "color": "wim",
+      "tag": "Holanda · Método Wim Hof",
+      "name": "Respiração Wim Hof",
+      "sub": "Hiperventilação controlada + retenção crescente",
+      "pattern": [
+        "30× inspire fundo",
+        "retenção sem ar",
+        "recuperação 15s"
+      ],
+      "effect": "30 respirações profundas rápidas, depois expire todo o ar e prenda — cada rodada a retenção cresce naturalmente. Ativa sistema nervoso, aumenta tolerância ao estresse.",
+      "timerSub": "Hiperventilação + Retenção Progressiva",
+      "origin": "Holanda · Método Wim Hof",
+      "instructions": "Deite-se ou sente-se. 30 respirações profundas rápidas, depois expire tudo e prenda. Aperte \"inspirar de volta\" quando sentir necessidade. 3 rodadas com metas crescentes.",
+      "roundsLabel": "rodadas",
+      "defaultRounds": 3,
+      "doneSub": "Sistema nervoso ativado e reset. Mente clara.",
+      "roundChips": [
+        "Rodada 1 · meta 1 min",
+        "Rodada 2 · meta 1,5 min",
+        "Rodada 3 · meta 2 min"
+      ],
+      "isWim": true,
+      "breaths": 30,
+      "retGoals": [
+        60,
+        90,
+        120
+      ]
+    }
+  }
+}

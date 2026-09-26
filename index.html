@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Breathe</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#f5f0e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13100c" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Breathe">
+<link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f0e8;
+    --ink: #1a1008;
+    --muted: #4a3a20;
+    --accent-warm: #c4713a;
+    --accent-cool: #4a7a8a;
+    --accent-earth: #6a7a4a;
+    --accent-wim: #7a4a8a;
+    --paper: #faf8f3;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #13100c;
+      --ink: #e8e0d0;
+      --muted: #a09070;
+      --accent-warm: #d4834a;
+      --accent-cool: #5a8a9a;
+      --accent-earth: #7a8a5a;
+      --accent-wim: #a476b4;
+      --paper: #1e1810;
+    }
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 56px;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .lang-switch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 4px;
+  }
+
+  .lang-btn {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid rgba(42,32,22,0.2);
+    color: var(--muted);
+    border-radius: 2px;
+    padding: 5px 8px;
+    min-width: 36px;
+    min-height: 36px;
+    cursor: pointer;
+  }
+
+  .lang-btn[aria-pressed="true"] {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+
+  .logo-char {
+    font-size: 1.8rem;
+    letter-spacing: 0.4em;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  h1 { font-size: 1.9rem; font-weight: 300; letter-spacing: 0.05em; }
+  .subtitle { font-style: italic; font-size: 0.95rem; color: var(--muted); margin-top: 4px; }
+
+  .section-label {
+    width: 100%;
+    max-width: 560px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 20px 0 10px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(42,32,22,0.12);
+  }
+
+  .effect-dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-right: 4px;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+
+  .dot-warm  { background: var(--accent-warm); }
+  .dot-cool  { background: var(--accent-cool); }
+  .dot-earth { background: var(--accent-earth); }
+  .dot-wim   { background: var(--accent-wim); }
+
+  .cards-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cards-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card {
+    background: var(--paper);
+    border: 1px solid rgba(42,32,22,0.11);
+    border-radius: 4px;
+    padding: 15px 14px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.15s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    border-radius: 4px 0 0 4px;
+    z-index: 1;
+    height: 100%;
+    background: var(--card-accent, var(--accent-warm));
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 20px rgba(42,32,22,0.1);
+    transform: translateY(-1px);
+  }
+
+  .card.cool  { --card-accent: var(--accent-cool); }
+  .card.earth { --card-accent: var(--accent-earth); }
+  .card.wim   { --card-accent: var(--accent-wim); }
+
+  .card-h {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .card-h .card-left { flex: 0 0 auto; min-width: 136px; }
+  .card-h .card-right { flex: 1; }
+
+  .card-tag {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .card-name { font-size: 1.4rem; font-weight: 400; line-height: 1.2; margin-bottom: 3px; }
+  .card-sub  { font-size: 0.95rem; font-style: italic; color: var(--muted); margin-bottom: 6px; }
+  .card-effect { font-size: 1.05rem; color: var(--ink); line-height: 1.5; }
+
+  .card-pattern { display: flex; gap: 5px; margin-top: 9px; flex-wrap: wrap; }
+
+  .phase-pill {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.6rem;
+    background: rgba(42,32,22,0.07);
+    border-radius: 20px;
+    padding: 2px 8px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .wim-card-body { display: flex; gap: 14px; align-items: flex-start; }
+  .wim-rounds-preview { flex: 0 0 auto; display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
+
+  .wim-round-chip {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.72rem;
+    background: rgba(122,74,138,0.08);
+    border-radius: 3px;
+    padding: 3px 7px;
+    color: var(--accent-wim);
+    white-space: nowrap;
+  }
+
+  /* ======= TIMER ======= */
+  #timer-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+    overflow-y: auto;
+  }
+
+  #timer-overlay.active { display: flex; }
+
+  .timer-origin {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+
+  .timer-name { font-size: 2rem; font-weight: 300; text-align: center; margin-bottom: 3px; }
+  .timer-sub  { font-style: italic; font-size: 0.88rem; color: var(--muted); margin-bottom: 16px; text-align: center; }
+
+  .circle-wrap {
+    position: relative;
+    width: 210px; height: 210px;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+  }
+
+  .circle-wrap svg {
+    position: absolute;
+    top: 0; left: 0;
+    transform: rotate(-90deg);
+  }
+
+  .circle-bg { fill: none; stroke: rgba(42,32,22,0.1); stroke-width: 3; }
+
+  #progress-ring {
+    fill: none;
+    stroke: var(--accent-warm);
+    stroke-width: 3;
+    stroke-linecap: round;
+    transition: stroke 0.4s ease;
+  }
+
+  .circle-inner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #phase-label {
+    font-size: 0.65rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    min-height: 1em;
+    text-align: center;
+    padding: 0 18px;
+  }
+
+  #count-display { font-size: 3.8rem; font-weight: 300; line-height: 1; letter-spacing: -0.02em; }
+  #unit-label { font-size: 0.65rem; color: var(--muted); margin-top: 2px; font-family: 'Noto Sans JP', sans-serif; }
+
+  #wim-dots { display: none; gap: 8px; margin-bottom: 14px; justify-content: center; }
+  #wim-dots.show { display: flex; }
+
+  .wim-dot {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(122,74,138,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.72rem;
+    color: var(--muted);
+    transition: all 0.3s;
+  }
+
+  .wim-dot.active { background: var(--accent-wim); color: white; border-color: var(--accent-wim); }
+  .wim-dot.done   { background: rgba(122,74,138,0.15); border-color: rgba(122,74,138,0.3); color: var(--accent-wim); }
+
+  #wim-ret-panel {
+    display: none;
+    background: rgba(122,74,138,0.06);
+    border: 1px solid rgba(122,74,138,0.15);
+    border-radius: 4px;
+    padding: 14px 20px;
+    margin-bottom: 14px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #wim-ret-panel.show { display: block; }
+
+  .wim-ret-lbl { font-family: 'Noto Sans JP', sans-serif; font-size: 0.75rem; letter-spacing: 0.14em; color: var(--accent-wim); text-transform: uppercase; margin-bottom: 4px; }
+  #wim-ret-sec { font-size: 2.6rem; font-weight: 300; color: var(--accent-wim); line-height: 1; }
+  .wim-ret-sub { font-size: 0.72rem; font-style: italic; color: var(--muted); margin-top: 3px; }
+  #wim-ret-end {
+    margin-top: 10px;
+    background: var(--accent-wim);
+    color: white;
+    border: none;
+    padding: 8px 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .cycles-info { font-size: 0.82rem; color: var(--muted); text-align: center; margin-bottom: 14px; font-style: italic; }
+
+  .instructions {
+    max-width: 340px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+
+  .listen-btn {
+    margin-bottom: 14px;
+    background: transparent;
+    border: 1px solid rgba(42,32,22,0.25);
+    padding: 8px 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--muted);
+    border-radius: 2px;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+  }
+
+  .rounds-row { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+  .rounds-label { font-size: 0.8rem; color: var(--muted); font-style: italic; }
+  .rounds-num { display: flex; align-items: center; gap: 8px; }
+
+  .rounds-btn {
+    width: 40px; height: 40px;
+    border: 1px solid rgba(42,32,22,0.2);
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+  }
+
+  #rounds-val { font-size: 1.25rem; min-width: 22px; text-align: center; }
+
+  .controls { display: flex; gap: 12px; align-items: center; }
+
+  .btn {
+    background: var(--ink);
+    color: var(--bg);
+    border: none;
+    padding: 10px 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .btn:hover { opacity: 0.8; }
+  .btn-ghost { background: transparent; color: var(--muted); border: 1px solid rgba(42,32,22,0.2); }
+
+  #back-btn {
+    position: absolute;
+    top: 18px; left: 16px;
+    background: none;
+    border: none;
+    font-size: 0.72rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  .done-msg { display: none; flex-direction: column; align-items: center; text-align: center; }
+  .done-msg.show { display: flex; }
+
+  .done-char { font-size: 2.4rem; margin-bottom: 12px; }
+  .done-text { font-size: 1.3rem; font-weight: 300; margin-bottom: 6px; }
+  .done-sub  { font-style: italic; color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; max-width: 280px; line-height: 1.5; }
+
+  @media (max-width: 400px) {
+    .cards-2 { grid-template-columns: 1fr; }
+    .card-h { flex-direction: column; gap: 8px; }
+    .wim-card-body { flex-direction: column; }
+  }
+
+  .card:focus-visible,
+  .rounds-btn:focus-visible,
+  .btn:focus-visible,
+  .listen-btn:focus-visible,
+  .lang-btn:focus-visible,
+  #back-btn:focus-visible {
+    outline: 2px solid var(--accent-cool);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .card:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="lang-switch" role="group" aria-label="Language / Idioma / Langue" id="lang-switch">
+    <button class="lang-btn" data-lang="pt" aria-pressed="false">PT</button>
+    <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+  </div>
+  <span class="logo-char" aria-hidden="true">息 呼 श्वास</span>
+  <h1 id="header-title"></h1>
+  <p class="subtitle" id="header-subtitle"></p>
+</header>
+
+<main id="practice-list" aria-busy="true"></main>
+
+<!-- TIMER OVERLAY -->
+<div id="timer-overlay" role="dialog" aria-modal="true" aria-labelledby="t-name">
+  <button id="back-btn" onclick="goBack()"></button>
+
+  <div class="timer-origin" id="t-origin"></div>
+  <div class="timer-name"   id="t-name" tabindex="-1"></div>
+  <div class="timer-sub"    id="t-sub"></div>
+
+  <div id="wim-dots"></div>
+
+  <button class="listen-btn" onclick="listenInstructions()" id="listen-btn"></button>
+
+  <div id="timer-main">
+    <div id="wim-ret-panel">
+      <div class="wim-ret-lbl" id="wim-ret-lbl"></div>
+      <div id="wim-ret-sec">0</div>
+      <div class="wim-ret-sub" id="wim-ret-sub"></div>
+      <button id="wim-ret-end" onclick="endRetention()"></button>
+    </div>
+
+    <div class="circle-wrap">
+      <svg width="210" height="210" viewBox="0 0 210 210">
+        <circle class="circle-bg" cx="105" cy="105" r="95"/>
+        <circle id="progress-ring" cx="105" cy="105" r="95"/>
+      </svg>
+      <div class="circle-inner">
+        <div id="phase-label" aria-live="polite" aria-atomic="true">—</div>
+        <div id="count-display" aria-hidden="true">0</div>
+        <div id="unit-label"></div>
+      </div>
+    </div>
+
+    <div class="cycles-info" id="cycles-info"></div>
+    <div class="instructions" id="t-instructions"></div>
+
+    <div class="rounds-row" id="rounds-row">
+      <span class="rounds-label" id="rounds-label-text"></span>
+      <div class="rounds-num">
+        <button class="rounds-btn" onclick="changeRounds(-1)" aria-label="-">−</button>
+        <span id="rounds-val">5</span>
+        <button class="rounds-btn" onclick="changeRounds(1)" aria-label="+">+</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn btn-ghost" onclick="resetTimer()" id="reset-btn"></button>
+      <button class="btn" id="ss-btn" onclick="toggleTimer()"></button>
+    </div>
+  </div>
+
+  <div class="done-msg" id="done-msg">
+    <div class="done-char" aria-hidden="true">🌿</div>
+    <div class="done-text" id="done-text"></div>
+    <div class="done-sub" id="done-sub"></div>
+    <div class="controls">
+      <button class="btn btn-ghost" onclick="resetTimer()" id="repeat-btn"></button>
+      <button class="btn" onclick="goBack()" id="other-btn"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+const PRACTICE_ORDER = ['taoist','quadrada6','quadrada8','quadrada10','prolongada3','prolongada','prolongada6',
+  'farinelli','jufranco1','jufranco2','jufranco3','bhramari','nadishodhana','tanden','chandrabhedana','nestor',
+  'coherent','478','anapana','sushumna','kapalabhati','bhastrika','ujjayi','suryabhedana','wimhof'];
+
+const SECTIONS = [
+  {key:'box',      layout:'cards-1', dot:'cool'},
+  {key:'exhale',   layout:'cards-1', dot:'earth'},
+  {key:'voice1',   layout:'cards-1', dot:'warm'},
+  {key:'voice2',   layout:'cards-1', dot:'warm'},
+  {key:'calm',     layout:'cards-1', dot:'cool'},
+  {key:'wim',      layout:'cards-1', dot:'wim'},
+  {key:'energize', layout:'cards-2', dot:'warm'},
+];
+
+const HTML_LANGS = {pt:'pt-BR', en:'en', fr:'fr'};
+const SUPPORTED_LANGS = ['pt','en','fr'];
+const i18nCache = {};
+let LANG = 'en';
+let I18N = null;
+
+function detectLang() {
+  const params = new URLSearchParams(location.search);
+  const urlLang = params.get('lang');
+  if (urlLang && SUPPORTED_LANGS.includes(urlLang)) return urlLang;
+  const saved = localStorage.getItem('breathe-lang');
+  if (saved && SUPPORTED_LANGS.includes(saved)) return saved;
+  const navLangs = navigator.languages || [navigator.language || 'en'];
+  for (const nl of navLangs) {
+    const short = nl.slice(0, 2).toLowerCase();
+    if (SUPPORTED_LANGS.includes(short)) return short;
+  }
+  return 'en';
+}
+
+async function loadLang(lang, { persist } = { persist: true }) {
+  if (!i18nCache[lang]) {
+    const res = await fetch(`i18n/${lang}.json`);
+    i18nCache[lang] = await res.json();
+  }
+  LANG = lang;
+  I18N = i18nCache[lang];
+  if (persist) localStorage.setItem('breathe-lang', lang);
+  document.getElementById('html-root').lang = HTML_LANGS[lang] || 'en';
+  document.title = I18N.ui.docTitle;
+  renderPage();
+  prefetchOtherLangs();
+}
+
+function prefetchOtherLangs() {
+  SUPPORTED_LANGS.filter(l => l !== LANG).forEach(l => {
+    if (!i18nCache[l]) fetch(`i18n/${l}.json`).then(r => r.json()).then(d => { i18nCache[l] = d; }).catch(() => {});
+  });
+}
+
+function switchLang(lang) {
+  if (lang === LANG) return;
+  loadLang(lang, { persist: true });
+}
+
+function renderPage() {
+  const ui = I18N.ui;
+  document.getElementById('header-title').textContent = ui.headerTitle;
+  document.getElementById('header-subtitle').textContent = ui.headerSubtitle;
+  document.querySelectorAll('.lang-btn').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === LANG ? 'true' : 'false'));
+
+  document.getElementById('back-btn').textContent = ui.back;
+  document.getElementById('listen-btn').textContent = ui.hearInstructions;
+  document.getElementById('wim-ret-lbl').textContent = ui.retentionLabel;
+  document.getElementById('wim-ret-sub').textContent = ui.secondsUnit;
+  document.getElementById('wim-ret-end').textContent = ui.breatheInBtn;
+  document.getElementById('rounds-label-text').textContent = ui.roundsColon;
+  document.getElementById('reset-btn').textContent = ui.reset;
+  document.getElementById('done-text').textContent = ui.practiceComplete;
+  document.getElementById('repeat-btn').textContent = ui.repeat;
+  document.getElementById('other-btn').textContent = ui.otherPractices;
+  document.getElementById('unit-label').textContent = ui.secUnit;
+  document.getElementById('ss-btn').textContent = running ? ui.pause : (timeLeft > 0 ? ui.continue : ui.start);
+
+  const list = document.getElementById('practice-list');
+  list.setAttribute('aria-busy', 'false');
+  list.innerHTML = '';
+
+  SECTIONS.forEach(section => {
+    const keysInSection = PRACTICE_ORDER.filter(k => I18N.practices[k].section === section.key);
+    if (!keysInSection.length) return;
+    const label = document.createElement('div');
+    label.className = 'section-label';
+    label.innerHTML = `<span class="effect-dot dot-${section.dot}"></span> ${escapeHtml(ui.sections[section.key])}`;
+    list.appendChild(label);
+
+    const wrap = document.createElement('div');
+    wrap.className = section.layout;
+    keysInSection.forEach(key => wrap.appendChild(buildCard(key, section)));
+    list.appendChild(wrap);
+  });
+
+  // Re-populate the open timer overlay (e.g. after a language switch) if needed
+  if (cur) open_(curKey, true);
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function pillsHtml(pattern) {
+  return pattern.map(p => `<span class="phase-pill">${escapeHtml(p)}</span>`).join('');
+}
+
+function buildCard(key, section) {
+  const p = I18N.practices[key];
+  const card = document.createElement('div');
+  card.setAttribute('role', 'button');
+  card.setAttribute('tabindex', '0');
+  card.dataset.key = key;
+
+  if (key === 'wimhof') {
+    card.className = 'card wim';
+    card.innerHTML = `
+      <div class="card-tag">${escapeHtml(p.tag)}</div>
+      <div class="card-name">${escapeHtml(p.name)}</div>
+      <div class="card-sub">${escapeHtml(p.sub)}</div>
+      <div class="wim-card-body" style="margin-top:8px">
+        <div style="flex:1">
+          <div class="card-effect">${p.effect}</div>
+          <div class="card-pattern" style="margin-top:10px">${pillsHtml(p.pattern)}</div>
+        </div>
+        <div class="wim-rounds-preview">${(p.roundChips || []).map(c => `<div class="wim-round-chip">${escapeHtml(c)}</div>`).join('')}</div>
+      </div>`;
+  } else if (section.layout === 'cards-2') {
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="card-tag">${escapeHtml(p.tag)}</div>
+      <div class="card-name">${escapeHtml(p.name)}</div>
+      <div class="card-sub">${escapeHtml(p.sub)}</div>
+      <div class="card-effect">${p.effect}</div>
+      <div class="card-pattern">${pillsHtml(p.pattern)}</div>`;
+  } else {
+    card.className = 'card' + (p.color && p.color !== 'warm' ? ' ' + p.color : '') + ' card-h';
+    card.innerHTML = `
+      <div class="card-left">
+        <div class="card-tag">${escapeHtml(p.tag)}</div>
+        <div class="card-name">${escapeHtml(p.name)}</div>
+        <div class="card-sub">${escapeHtml(p.sub)}</div>
+        <div class="card-pattern">${pillsHtml(p.pattern)}</div>
+      </div>
+      <div class="card-right">
+        <div class="card-effect">${p.effect}</div>
+      </div>`;
+  }
+
+  card.addEventListener('click', () => open_(key));
+  return card;
+}
+
+document.addEventListener('keydown', (e) => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.card[role="button"]')) {
+    e.preventDefault();
+    e.target.click();
+  }
+});
+
+let lastFocused = null;
+document.addEventListener('click', (e) => {
+  const card = e.target.closest('.card[role="button"]');
+  if (card) lastFocused = card;
+});
+
+document.getElementById('timer-overlay').addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') goBack();
+});
+
+document.getElementById('lang-switch').addEventListener('click', (e) => {
+  const btn = e.target.closest('.lang-btn');
+  if (btn) switchLang(btn.dataset.lang);
+});
+
+const CIRC = 2 * Math.PI * 95;
+const ring = document.getElementById('progress-ring');
+ring.style.strokeDasharray = CIRC;
+ring.style.strokeDashoffset = CIRC;
+
+const COLORS = { warm:'#c4713a', cool:'#4a7a8a', earth:'#6a7a4a', wim:'#7a4a8a' };
+
+// ── Tibetan Bowl ──────────────────────────────────────────────
+let audioCtx=null;
+
+function bell(type='phase'){
+  try{
+    if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+    const ctx=audioCtx;
+    function doPlay(){
+      const t=ctx.currentTime;
+      const bowl = type==='done'
+        ? { f:180, vol:0.09, partials:[[1,1.0,9.0],[2.756,0.45,6.5],[5.404,0.20,4.2],[8.933,0.09,2.8],[13.35,0.04,1.6]] }
+        : { f:324, vol:0.065, partials:[[1,1.0,6.0],[2.756,0.42,4.5],[5.404,0.18,3.0],[8.933,0.08,2.0],[13.35,0.035,1.2]] };
+      const comp=ctx.createDynamicsCompressor();
+      comp.threshold.value=-18; comp.knee.value=12; comp.ratio.value=3;
+      comp.attack.value=0.003; comp.release.value=0.4; comp.connect(ctx.destination);
+      const master=ctx.createGain();
+      master.gain.setValueAtTime(0,t);
+      master.gain.linearRampToValueAtTime(bowl.vol,t+0.008);
+      master.gain.setValueAtTime(bowl.vol,t+0.012);
+      master.gain.exponentialRampToValueAtTime(0.0001,t+bowl.partials[0][2]+1);
+      master.connect(comp);
+      const bufLen=ctx.sampleRate*0.04;
+      const noiseBuf=ctx.createBuffer(1,bufLen,ctx.sampleRate);
+      const nd=noiseBuf.getChannelData(0);
+      for(let i=0;i<bufLen;i++) nd[i]=(Math.random()*2-1)*Math.pow(1-i/bufLen,4)*0.35;
+      const ns=ctx.createBufferSource(); ns.buffer=noiseBuf;
+      const nf=ctx.createBiquadFilter(); nf.type='bandpass'; nf.frequency.value=bowl.f*3; nf.Q.value=2;
+      const ng=ctx.createGain(); ng.gain.setValueAtTime(0.6,t); ng.gain.exponentialRampToValueAtTime(0.0001,t+0.06);
+      ns.connect(nf); nf.connect(ng); ng.connect(master); ns.start(t); ns.stop(t+0.07);
+      bowl.partials.forEach(([ratio,amp,decay])=>{
+        const osc=ctx.createOscillator(); const g=ctx.createGain();
+        osc.type='sine'; osc.frequency.value=bowl.f*ratio;
+        if(ratio===1){ osc.frequency.setValueAtTime(bowl.f*1.002,t); osc.frequency.exponentialRampToValueAtTime(bowl.f,t+0.3); }
+        g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(amp,t+0.01); g.gain.exponentialRampToValueAtTime(0.0001,t+decay);
+        osc.connect(g); g.connect(master); osc.start(t); osc.stop(t+decay+0.05);
+      });
+    }
+    if(ctx.state==='suspended') ctx.resume().then(doPlay).catch(()=>{});
+    else doPlay();
+  }catch(e){}
+}
+
+// ── No-Sleep ──────────────────────────────────────────────────
+let wakeLock=null, noSleepVideo=null, noSleepAudio=null;
+
+function buildNoSleepVideo(){
+  const v=document.createElement('video');
+  v.setAttribute('playsinline',''); v.setAttribute('muted',''); v.setAttribute('loop','');
+  v.style.cssText='position:fixed;width:1px;height:1px;top:0;left:0;opacity:0;pointer-events:none;';
+  v.src='data:video/mp4;base64,AAAAIGZ0eXBpc29tAAACAGlzb21pc28yYXZjMW1wNDEAAAAIZnJlZQAAAs1tZGF0AAACrgYF//+q3EXpvebZSLeWLNgg2SPu73gyNjQgLSBjb3JlIDE0OCByMjYwMSBhMGNkN2QzIC0gSC4yNjQvTVBFRy00IEFWQyBjb2RlYyAtIENvcHlsZWZ0IDIwMDMtMjAxNSAtIGh0dHA6Ly93d3cudmlkZW9sYW4ub3JnL3gyNjQuaHRtbCAtIG9wdGlvbnM6IGNhYmFjPTEgcmVmPTMgZGVibG9jaz0xOjA6MCBhbmFseXNlPTB4MzoweDExMyBtZT1oZXggc3VibWU9NyBwc3k9MSBwc3lfcmQ9MS4wMDowLjAwIG1peGVkX3JlZj0xIG1lX3JhbmdlPTE2IGNocm9tYV9tZT0xIHRyZWxsaXM9MSA4eDhkY3Q9MSBjcW09MCBkZWFkem9uZT0yMSwxMSBmYXN0X3Bza2lwPTEgY2hyb21hX3FwX29mZnNldD0tMiB0aHJlYWRzPTMgbG9va2FoZWFkX3RocmVhZHM9MSBzbGljZWRfdGhyZWFkcz0wIG5yPTAgZGVjaW1hdGU9MSBpbnRlcmxhY2VkPTAgYmx1cmF5X2NvbXBhdD0wIGNvbnN0cmFpbmVkX2ludHJhPTAgYmZyYW1lcz0zIGJfcHlyYW1pZD0yIGJfYWRhcHQ9MSBiX2JpYXM9MCBkaXJlY3Q9MSB3ZWlnaHRiPTEgb3Blbl9nb3A9MCB3ZWlnaHRwPTIga2V5aW50PTI1MCBrZXlpbnRfbWluPTI1IHNjZW5lY3V0PTQwIGludHJhX3JlZnJlc2g9MCByY19sb29rYWhlYWQ9NDAgcmM9Y3JmIG1idHJlZT0xIGNyZj0yMy4wIHFjb21wPTAuNjAgcXBtaW49MCBxcG1heD02OSBxcHN0ZXA9NCBpcF9yYXRpbz0xLjQwIGFxPTE6MS4wMACAAAAPZWxpYngtLT4KICAgICAgICBbMF0gU3RhcnQgbWVhc3VyaW5nIHN0cmVhbQogICAgICAgIFswXSBEb25lIG1lYXN1cmluZyBzdHJlYW0KAAAADGluZnIAAAAA';
+  document.body.appendChild(v); return v;
+}
+
+async function acquireWakeLock(){
+  try{ if('wakeLock' in navigator){ wakeLock=await navigator.wakeLock.request('screen'); return; } }catch(e){}
+  try{ if(!noSleepVideo) noSleepVideo=buildNoSleepVideo(); await noSleepVideo.play(); return; }catch(e){}
+  try{
+    if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+    function silentPulse(){ if(!running) return; const o=audioCtx.createOscillator(),g=audioCtx.createGain(); g.gain.value=0.00001; o.connect(g); g.connect(audioCtx.destination); o.start(); o.stop(audioCtx.currentTime+0.01); noSleepAudio=setTimeout(silentPulse,25000); }
+    silentPulse();
+  }catch(e){}
+}
+
+function releaseWakeLock(){
+  try{ if(wakeLock){ wakeLock.release(); wakeLock=null; } }catch(e){}
+  try{ if(noSleepVideo){ noSleepVideo.pause(); } }catch(e){}
+  try{ if(noSleepAudio){ clearTimeout(noSleepAudio); noSleepAudio=null; } }catch(e){}
+}
+
+document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='visible'&&running) acquireWakeLock(); });
+
+// ── Speech ────────────────────────────────────────────────────
+function listenInstructions(){
+  if(!cur) return;
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(cur.instructions);
+  u.lang=I18N.ui.speechLang; u.rate=0.88; u.pitch=1.0;
+  const falar=()=>{
+    const vozes=window.speechSynthesis.getVoices();
+    const hint=I18N.ui.voiceNameHint;
+    const voz=vozes.find(v=>v.name.includes(hint))||vozes.find(v=>v.lang===I18N.ui.speechLang)||vozes.find(v=>v.lang.startsWith(LANG));
+    if(voz) u.voice=voz;
+    window.speechSynthesis.speak(u);
+  };
+  if(window.speechSynthesis.getVoices().length>0){ falar(); }
+  else{ window.speechSynthesis.onvoiceschanged=()=>{ window.speechSynthesis.onvoiceschanged=null; falar(); }; window.speechSynthesis.speak(new SpeechSynthesisUtterance('')); }
+}
+
+// ── State ─────────────────────────────────────────────────────
+let cur=null, curKey=null, rounds=5, phaseIdx=0, cycleCount=0, timeLeft=0, running=false;
+let ticker=null;
+let wimPhase='breathe', wimBC=0, wimRetSec=0, wimRet=null, wimRound=0;
+
+function open_(key, isRerender){
+  curKey=key; cur=I18N.practices[key]; if(!isRerender) rounds=cur.defaultRounds;
+  document.getElementById('rounds-val').textContent=rounds;
+  document.getElementById('t-origin').textContent=cur.origin;
+  document.getElementById('t-name').textContent=cur.name;
+  document.getElementById('t-sub').textContent=cur.timerSub;
+  document.getElementById('t-instructions').textContent=cur.instructions;
+  document.getElementById('done-sub').textContent=cur.doneSub;
+  ring.style.stroke=COLORS[cur.color]||COLORS.cool;
+  const isWim=!!cur.isWim;
+  document.getElementById('wim-dots').classList.toggle('show',isWim);
+  document.getElementById('rounds-row').style.display=isWim?'none':'';
+  if(isWim) buildDots();
+  document.getElementById('timer-overlay').classList.add('active');
+  if(!isRerender){
+    document.getElementById('timer-main').style.display='';
+    document.getElementById('done-msg').classList.remove('show');
+    document.getElementById('t-name').focus();
+    resetTimer();
+  }
+}
+
+function buildDots(){
+  const el=document.getElementById('wim-dots'); el.innerHTML='';
+  for(let i=0;i<3;i++){ const d=document.createElement('div'); d.className='wim-dot'; d.id='wd'+i; d.textContent='R'+(i+1); el.appendChild(d); }
+}
+
+function resetTimer(){
+  clearInterval(ticker); clearInterval(wimRet);
+  running=false; phaseIdx=0; cycleCount=0; timeLeft=0;
+  wimPhase='breathe'; wimBC=0; wimRetSec=0; wimRound=0;
+  document.getElementById('ss-btn').textContent=I18N.ui.start;
+  document.getElementById('done-msg').classList.remove('show');
+  document.getElementById('timer-main').style.display='';
+  document.getElementById('wim-ret-panel').classList.remove('show');
+  if(cur&&cur.isWim){ buildDots(); showWimBreath(); } else updateDisp();
+}
+
+function goBack(){
+  clearInterval(ticker); clearInterval(wimRet); running=false;
+  window.speechSynthesis.cancel();
+  releaseWakeLock();
+  document.getElementById('timer-overlay').classList.remove('active');
+  cur=null; curKey=null;
+  if(lastFocused) lastFocused.focus();
+}
+
+function toggleTimer(){ running ? pauseT() : startT(); }
+
+function pauseT(){
+  clearInterval(ticker); clearInterval(wimRet); running=false;
+  releaseWakeLock();
+  document.getElementById('ss-btn').textContent=I18N.ui.continue;
+}
+
+function startT(){
+  try{ if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)(); if(audioCtx.state==='suspended') audioCtx.resume(); }catch(e){}
+  running=true; acquireWakeLock();
+  document.getElementById('ss-btn').textContent=I18N.ui.pause;
+  if(cur.isWim){ startWim(); }
+  else{ if(timeLeft<=0) timeLeft=cur.phases[phaseIdx].duration; ticker=setInterval(tick,50); }
+}
+
+function tick(){
+  timeLeft-=0.05;
+  if(timeLeft<=0){
+    phaseIdx++;
+    if(phaseIdx>=cur.phases.length){ phaseIdx=0; cycleCount++; }
+    if(cycleCount>=rounds){ clearInterval(ticker); running=false; bell('done'); showDone(); return; }
+    timeLeft=cur.phases[phaseIdx].duration;
+    bell('phase');
+  }
+  updateDisp();
+}
+
+function updateDisp(){
+  if(!cur||cur.isWim) return;
+  const ph=cur.phases[phaseIdx], total=ph.duration, progress=(total-timeLeft)/total;
+  ring.style.strokeDashoffset=CIRC*(1-Math.min(progress,1));
+  document.getElementById('phase-label').textContent=ph.label;
+  document.getElementById('count-display').textContent=Math.ceil(Math.max(timeLeft,0));
+  document.getElementById('cycles-info').textContent=cur.roundsLabel+': '+(cycleCount+1)+' / '+rounds;
+}
+
+function showWimBreath(){
+  document.getElementById('wim-ret-panel').classList.remove('show');
+  const left=cur.breaths-wimBC;
+  document.getElementById('phase-label').textContent=wimPhase==='recovery'?I18N.ui.recoveryBreath:I18N.ui.deepBreath;
+  document.getElementById('count-display').textContent=left>0?left:'—';
+  document.getElementById('unit-label').textContent=I18N.ui.breathsUnit;
+  document.getElementById('cycles-info').textContent=I18N.ui.roundWord+' '+(wimRound+1)+' / 3';
+  ring.style.strokeDashoffset=CIRC*(1-wimBC/cur.breaths);
+  for(let i=0;i<3;i++){
+    const d=document.getElementById('wd'+i); if(!d) continue;
+    d.classList.remove('active','done');
+    if(i<wimRound) d.classList.add('done'); else if(i===wimRound) d.classList.add('active');
+  }
+}
+
+function startWim(){
+  if(wimPhase==='retention') return;
+  if(timeLeft<=0) timeLeft=wimPhase==='recovery'?15:1.5;
+  ticker=setInterval(wimTick,50);
+}
+
+function wimTick(){
+  timeLeft-=0.05;
+  if(timeLeft<=0){
+    if(wimPhase==='recovery'){
+      wimRound++; if(wimRound>=3){ clearInterval(ticker); running=false; bell('done'); showDone(); return; }
+      wimPhase='breathe'; wimBC=0; timeLeft=1.5; bell('phase'); showWimBreath(); return;
+    }
+    wimBC++; ring.style.strokeDashoffset=CIRC*(1-wimBC/cur.breaths);
+    document.getElementById('count-display').textContent=cur.breaths-wimBC;
+    if(wimBC>=cur.breaths){ clearInterval(ticker); wimPhase='retention'; bell('phase'); enterRet(); return; }
+    timeLeft=1.5;
+  }
+}
+
+function enterRet(){
+  document.getElementById('wim-ret-panel').classList.add('show');
+  ring.style.strokeDashoffset=CIRC;
+  document.getElementById('phase-label').textContent=I18N.ui.retention;
+  document.getElementById('count-display').textContent='—';
+  wimRetSec=0; document.getElementById('wim-ret-sec').textContent=0;
+  const goal=cur.retGoals[wimRound]||120;
+  document.getElementById('wim-ret-sub').textContent=I18N.ui.secondsUnit+'  ·  '+I18N.ui.goalLabel+': '+goal+'s';
+  wimRet=setInterval(()=>{ wimRetSec++; document.getElementById('wim-ret-sec').textContent=wimRetSec; ring.style.strokeDashoffset=CIRC*(1-Math.min(wimRetSec/goal,1)); },1000);
+}
+
+function endRetention(){
+  clearInterval(wimRet);
+  document.getElementById('wim-ret-panel').classList.remove('show');
+  wimPhase='recovery'; timeLeft=15;
+  document.getElementById('phase-label').textContent=I18N.ui.recovery;
+  document.getElementById('count-display').textContent=15;
+  document.getElementById('unit-label').textContent=I18N.ui.secUnit;
+  ring.style.strokeDashoffset=CIRC; bell('phase');
+  if(running) ticker=setInterval(wimTick,50);
+}
+
+function changeRounds(d){ rounds=Math.max(1,Math.min(99,rounds+d)); document.getElementById('rounds-val').textContent=rounds; }
+
+function showDone(){
+  document.getElementById('timer-main').style.display='none';
+  document.getElementById('done-msg').classList.add('show');
+  releaseWakeLock();
+}
+
+loadLang(detectLang());
+
+if ('serviceWorker' in navigator) {
+  const hadController = !!navigator.serviceWorker.controller;
+  window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); });
+  if (hadController) {
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (reloaded) return;
+      reloaded = true;
+      window.location.reload();
+    });
+  }
+}
+</script>
+</body>
+</html>

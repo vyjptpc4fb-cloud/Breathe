@@ -1,0 +1,925 @@
+{
+  "ui": {
+    "docTitle": "Breathe",
+    "headerTitle": "Breathing Practices",
+    "headerSubtitle": "mornings, eastern traditions",
+    "sections": {
+      "box": "box breathing · variations",
+      "exhale": "extended exhale · vagal activation",
+      "voice1": "voice · bel canto · vocal support",
+      "voice2": "voice · vocal pedagogy · Ju Franco",
+      "calm": "calming · balance · grounding",
+      "wim": "wim hof method · progressive retention",
+      "energize": "energizing"
+    },
+    "back": "← back",
+    "hearInstructions": "▶ hear instructions",
+    "retentionLabel": "retention — lungs empty",
+    "secondsUnit": "seconds",
+    "secUnit": "sec",
+    "breatheInBtn": "breathe in →",
+    "roundsColon": "rounds:",
+    "reset": "reset",
+    "start": "start",
+    "pause": "pause",
+    "continue": "continue",
+    "practiceComplete": "Practice complete",
+    "repeat": "repeat",
+    "otherPractices": "other practices",
+    "deepBreath": "Deep breath",
+    "recoveryBreath": "Recovery breath",
+    "breathsUnit": "breaths",
+    "roundWord": "Round",
+    "retention": "Retention",
+    "recovery": "Recovery",
+    "goalLabel": "goal",
+    "speechLang": "en-US",
+    "voiceNameHint": "Samantha"
+  },
+  "practices": {
+    "taoist": {
+      "section": "box",
+      "color": "cool",
+      "tag": "China · Taoism · Qi Gong",
+      "name": "Box Breathing 4-4-4-4",
+      "sub": "Si Fang Hu Xi",
+      "pattern": [
+        "inhale 4s",
+        "retention 4s",
+        "exhale 4s",
+        "empty 4s"
+      ],
+      "effect": "Four equal phases create a perfect yin-yang rhythm. Harmonizes qi, calms the nervous system, brings equanimity. Foundation of Taoist meditation.",
+      "timerSub": "Si Fang Hu Xi · Taoism",
+      "origin": "China · Taoism · Qi Gong",
+      "instructions": "Four equal phases of 4 seconds. Inhale · Full retention · Exhale · Empty. Observe the silence in the spaces between the movements of the air.",
+      "roundsLabel": "cycles",
+      "defaultRounds": 8,
+      "doneSub": "Qi flows. Yin and yang in balance.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 4
+        },
+        {
+          "label": "Full retention",
+          "duration": 4
+        },
+        {
+          "label": "Exhale",
+          "duration": 4
+        },
+        {
+          "label": "Empty",
+          "duration": 4
+        }
+      ]
+    },
+    "quadrada6": {
+      "section": "box",
+      "color": "cool",
+      "tag": "China · Taoism · Qi Gong",
+      "name": "Box Breathing 6-6-6-6",
+      "sub": "Deepened rhythm",
+      "pattern": [
+        "inhale 6s",
+        "retention 6s",
+        "exhale 6s",
+        "empty 6s"
+      ],
+      "effect": "Same box structure with longer counts. Deepens attention and inner silence. Good when the 4s practice is already established.",
+      "timerSub": "Deepened rhythm",
+      "origin": "China · Taoism · Qi Gong",
+      "instructions": "Four equal phases of 6 seconds. Inhale · Full retention · Exhale · Empty. Allow each phase to deepen naturally.",
+      "roundsLabel": "cycles",
+      "defaultRounds": 6,
+      "doneSub": "Silence deepens. Qi flows calmly.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 6
+        },
+        {
+          "label": "Full retention",
+          "duration": 6
+        },
+        {
+          "label": "Exhale",
+          "duration": 6
+        },
+        {
+          "label": "Empty",
+          "duration": 6
+        }
+      ]
+    },
+    "quadrada8": {
+      "section": "box",
+      "color": "cool",
+      "tag": "China · Taoism · Qi Gong",
+      "name": "Box Breathing 8-8-8-8",
+      "sub": "Meditative rhythm",
+      "pattern": [
+        "inhale 8s",
+        "retention 8s",
+        "exhale 8s",
+        "empty 8s"
+      ],
+      "effect": "Advanced level. Long retention and extended emptiness create states of deep stillness. Requires prior practice with shorter versions.",
+      "timerSub": "Meditative rhythm",
+      "origin": "China · Taoism · Qi Gong",
+      "instructions": "Four equal phases of 8 seconds. Inhale · Full retention · Exhale · Empty. Practice only if the shorter versions are already comfortable.",
+      "roundsLabel": "cycles",
+      "defaultRounds": 5,
+      "doneSub": "Stillness has settled. The body found its center.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 8
+        },
+        {
+          "label": "Full retention",
+          "duration": 8
+        },
+        {
+          "label": "Exhale",
+          "duration": 8
+        },
+        {
+          "label": "Empty",
+          "duration": 8
+        }
+      ]
+    },
+    "quadrada10": {
+      "section": "box",
+      "color": "cool",
+      "tag": "China · Taoism · Qi Gong",
+      "name": "Box Breathing 10-10-10-10",
+      "sub": "Contemplative rhythm",
+      "pattern": [
+        "inhale 10s",
+        "retention 10s",
+        "exhale 10s",
+        "empty 10s"
+      ],
+      "effect": "Deep contemplative practice. Each cycle lasts 40 seconds. Only for those who have the previous versions well established in the body.",
+      "timerSub": "Contemplative rhythm",
+      "origin": "China · Taoism · Qi Gong",
+      "instructions": "Four equal phases of 10 seconds. Each cycle lasts 40 seconds. Only for experienced practitioners. Inhale · Retention · Exhale · Empty with full attention.",
+      "roundsLabel": "cycles",
+      "defaultRounds": 4,
+      "doneSub": "Deep contemplation. Time has expanded.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 10
+        },
+        {
+          "label": "Full retention",
+          "duration": 10
+        },
+        {
+          "label": "Exhale",
+          "duration": 10
+        },
+        {
+          "label": "Empty",
+          "duration": 10
+        }
+      ]
+    },
+    "prolongada3": {
+      "section": "exhale",
+      "color": "earth",
+      "tag": "Universal · Grounding",
+      "name": "Extended Exhale",
+      "sub": "3s · 6s",
+      "pattern": [
+        "inhale 3s",
+        "exhale 6s"
+      ],
+      "effect": "Entry-level version. Exhaling twice the length of the inhale gently activates the vagus nerve. A good gateway for those who don't yet practice controlled breathing.",
+      "timerSub": "3s · 6s",
+      "origin": "Universal · Grounding",
+      "instructions": "Inhale softly through the nose for 3 seconds. Exhale slowly through the nose for 6 seconds — twice the time. Entry version, gentle and accessible.",
+      "roundsLabel": "cycles (≈ 3 min)",
+      "defaultRounds": 20,
+      "doneSub": "The vagus nerve calms. The anchor is cast.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 3
+        },
+        {
+          "label": "Exhale — long",
+          "duration": 6
+        }
+      ]
+    },
+    "prolongada": {
+      "section": "exhale",
+      "color": "earth",
+      "tag": "Universal · Grounding",
+      "name": "Extended Exhale",
+      "sub": "4s · 8s",
+      "pattern": [
+        "inhale 4s",
+        "exhale 8s"
+      ],
+      "effect": "Exhaling twice the length of the inhale activates the vagus nerve and slows the heart. Immediate anchor in turbulent moments. Entry version.",
+      "timerSub": "4s · 8s",
+      "origin": "Universal · Grounding",
+      "instructions": "Inhale softly through the nose for 4 seconds. Exhale slowly through the nose for 8 seconds — twice the time. Can be done in any position, at any moment.",
+      "roundsLabel": "cycles (≈ 3 min)",
+      "defaultRounds": 15,
+      "doneSub": "The vagus nerve calms. The anchor is cast.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 4
+        },
+        {
+          "label": "Exhale — long",
+          "duration": 8
+        }
+      ]
+    },
+    "prolongada6": {
+      "section": "exhale",
+      "color": "earth",
+      "tag": "Universal · Grounding",
+      "name": "Extended Exhale",
+      "sub": "6s · 12s",
+      "pattern": [
+        "inhale 6s",
+        "exhale 12s"
+      ],
+      "effect": "Deepened version. The longer exhale intensifies vagal activation and creates an even more stable calm. For when the body already knows the 4-8 rhythm.",
+      "timerSub": "6s · 12s",
+      "origin": "Universal · Grounding",
+      "instructions": "Inhale softly through the nose for 6 seconds. Exhale slowly through the nose for 12 seconds. Deepened version — the longer exhale intensifies vagal activation and creates more stable calm.",
+      "roundsLabel": "cycles (≈ 3 min)",
+      "defaultRounds": 10,
+      "doneSub": "The vagus nerve responds deeply. Stable calm.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 6
+        },
+        {
+          "label": "Exhale — long",
+          "duration": 12
+        }
+      ]
+    },
+    "farinelli": {
+      "section": "voice1",
+      "color": "warm",
+      "tag": "Europe · Bel Canto · 18th Century",
+      "name": "Farinelli Breathing",
+      "sub": "Vocal support and sustain",
+      "pattern": [
+        "inhale 5→10s",
+        "suspend 5→10s",
+        "exhale 5→10s"
+      ],
+      "effect": "Attributed to Farinelli and Porpora's method. Six progressive levels train the <em>appoggio</em> — active support without tension. At higher counts, the inhale is taken in plateaus: Lamperti's thimble breathing.",
+      "timerSub": "Vocal support and sustain",
+      "origin": "Europe · Bel Canto · 18th Century",
+      "instructions": "Six progressive levels from 5 to 10 counts, after Richard Miller (The Structure of Singing). Inhale — Suspend — Exhale, always symmetrical. At higher counts, the inhale happens in plateaus: micro-suspensions within the inhalation phase itself, without exhaling. This is Lamperti's thimble breathing. Active appoggio, no visible tension in neck or shoulders.",
+      "roundsLabel": "full sequence",
+      "defaultRounds": 1,
+      "doneSub": "The appoggio is active. The air column, sustained.",
+      "phases": [
+        {
+          "label": "Inhale — level 1",
+          "duration": 5
+        },
+        {
+          "label": "Suspend",
+          "duration": 5
+        },
+        {
+          "label": "Exhale",
+          "duration": 5
+        },
+        {
+          "label": "Inhale — level 2",
+          "duration": 6
+        },
+        {
+          "label": "Suspend",
+          "duration": 6
+        },
+        {
+          "label": "Exhale",
+          "duration": 6
+        },
+        {
+          "label": "Inhale — level 3",
+          "duration": 7
+        },
+        {
+          "label": "Suspend",
+          "duration": 7
+        },
+        {
+          "label": "Exhale",
+          "duration": 7
+        },
+        {
+          "label": "Inhale — level 4",
+          "duration": 8
+        },
+        {
+          "label": "Suspend",
+          "duration": 8
+        },
+        {
+          "label": "Exhale",
+          "duration": 8
+        },
+        {
+          "label": "Inhale — level 5",
+          "duration": 9
+        },
+        {
+          "label": "Suspend",
+          "duration": 9
+        },
+        {
+          "label": "Exhale",
+          "duration": 9
+        },
+        {
+          "label": "Inhale — level 6",
+          "duration": 10
+        },
+        {
+          "label": "Suspend",
+          "duration": 10
+        },
+        {
+          "label": "Exhale",
+          "duration": 10
+        }
+      ]
+    },
+    "jufranco1": {
+      "section": "voice2",
+      "color": "warm",
+      "tag": "Vocal Pedagogy · Ju Franco",
+      "name": "Exercise 1",
+      "sub": "Inhale · airflow · release — 6 counts",
+      "pattern": [
+        "inhale 6",
+        "S or x 6",
+        "release"
+      ],
+      "effect": "Inhale for 6 counts, release controlled airflow (S or x) for 6 counts, release. Introduction to airflow management.",
+      "timerSub": "Inhale · airflow · release — 6 counts",
+      "origin": "Vocal Pedagogy · Ju Franco",
+      "instructions": "Inhale for 6 counts. Release controlled airflow as S or x for 6 counts. Release. The S or x is a continuous fricative — not apnea, it is air in controlled motion.",
+      "roundsLabel": "repetitions",
+      "defaultRounds": 8,
+      "doneSub": "The air column found its flow.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 6
+        },
+        {
+          "label": "S or x — airflow",
+          "duration": 6
+        },
+        {
+          "label": "Release",
+          "duration": 1
+        }
+      ]
+    },
+    "jufranco2": {
+      "section": "voice2",
+      "color": "warm",
+      "tag": "Vocal Pedagogy · Ju Franco",
+      "name": "Exercise 2",
+      "sub": "Inhale · airflow · hold · airflow · release — 6 counts",
+      "pattern": [
+        "inhale 6",
+        "S or x 6",
+        "hold 6",
+        "S or x 6",
+        "release"
+      ],
+      "effect": "Adds a suspension between airflows. Trains breath suspension and return to flow control.",
+      "timerSub": "Inhale · airflow · hold · airflow · release — 6 counts",
+      "origin": "Vocal Pedagogy · Ju Franco",
+      "instructions": "Inhale for 6 counts. S or x for 6. Hold for 6 — active suspension, not collapse. S or x for 6. Release. Trains returning to flow after suspension.",
+      "roundsLabel": "repetitions",
+      "defaultRounds": 6,
+      "doneSub": "Suspension and flow in balance.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 3
+        },
+        {
+          "label": "S or x — airflow",
+          "duration": 3
+        },
+        {
+          "label": "Hold",
+          "duration": 3
+        },
+        {
+          "label": "S or x — airflow",
+          "duration": 3
+        },
+        {
+          "label": "Release",
+          "duration": 1
+        }
+      ]
+    },
+    "jufranco3": {
+      "section": "voice2",
+      "color": "warm",
+      "tag": "Vocal Pedagogy · Ju Franco",
+      "name": "Exercise 3",
+      "sub": "Inhale · airflow · hold · airflow · hold · release — 6 counts",
+      "pattern": [
+        "inhale 6",
+        "S or x 6",
+        "hold 6",
+        "S or x 6",
+        "hold 6",
+        "release"
+      ],
+      "effect": "More complex version with two suspensions. Maximum airflow control across multiple suspended gestures before the final release.",
+      "timerSub": "Inhale · airflow · hold · airflow · hold · release — 6 counts",
+      "origin": "Vocal Pedagogy · Ju Franco",
+      "instructions": "Inhale for 6 counts. S or x for 6. Hold for 6. S or x for 6. Hold for 6. Release. Maximum airflow control across multiple suspended gestures. Requires the previous versions well incorporated in the body.",
+      "roundsLabel": "repetitions",
+      "defaultRounds": 5,
+      "doneSub": "The air column, mastered. The instrument, ready.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 3
+        },
+        {
+          "label": "S or x — airflow",
+          "duration": 3
+        },
+        {
+          "label": "Hold",
+          "duration": 3
+        },
+        {
+          "label": "S or x — airflow",
+          "duration": 3
+        },
+        {
+          "label": "Hold",
+          "duration": 3
+        },
+        {
+          "label": "Release",
+          "duration": 1
+        }
+      ]
+    },
+    "bhramari": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "India · Hatha Yoga · Pranayama",
+      "name": "Bhramari",
+      "sub": "Bee Breath",
+      "pattern": [
+        "inhale 4s",
+        "humming 12s"
+      ],
+      "effect": "Inhale and on the exhale produce a soft, continuous hum. The vibration resonates through the skull and directly activates the vagus nerve. Deeply calming, reduces anxiety and blood pressure.",
+      "timerSub": "Bee Breath",
+      "origin": "India · Hatha Yoga · Pranayama",
+      "instructions": "Inhale through the nose for 4 seconds. Gently close the ears with the thumbs and eyes with the fingers. On the exhale, produce a soft continuous hum — like a bee — for as long as comfortable, up to 12 seconds. Feel the vibration resonating through the skull and chest.",
+      "roundsLabel": "cycles",
+      "defaultRounds": 7,
+      "doneSub": "The vibration calms. The nervous system found its center.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 4
+        },
+        {
+          "label": "Humming",
+          "duration": 12
+        }
+      ]
+    },
+    "nadishodhana": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "India · Pranayama",
+      "name": "Nadi Shodhana",
+      "sub": "Alternate Nostril",
+      "pattern": [
+        "inhale left 4s",
+        "retention 4s",
+        "exhale right 8s"
+      ],
+      "effect": "Balances the brain hemispheres and subtle and physical channels. Mental clarity, deep calm. Excellent for starting the day with full centeredness.",
+      "timerSub": "Alternate Nostril",
+      "origin": "India · Pranayama",
+      "instructions": "Right hand: thumb closes right nostril, ring finger closes left nostril. Inhale left 4s → retention 4s → exhale right 8s. Then inhale right 4s → retention 4s → exhale left 8s. That is 1 complete cycle.",
+      "roundsLabel": "complete cycles",
+      "defaultRounds": 5,
+      "doneSub": "The channels are clear. Balance restored.",
+      "phases": [
+        {
+          "label": "Inhale — left",
+          "duration": 4
+        },
+        {
+          "label": "Retention",
+          "duration": 4
+        },
+        {
+          "label": "Exhale — right",
+          "duration": 8
+        },
+        {
+          "label": "Inhale — right",
+          "duration": 4
+        },
+        {
+          "label": "Retention",
+          "duration": 4
+        },
+        {
+          "label": "Exhale — left",
+          "duration": 8
+        }
+      ]
+    },
+    "tanden": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "Japan · Zen · Aikido",
+      "name": "Tanden Kokyu",
+      "sub": "Hara Breathing",
+      "pattern": [
+        "inhale 4s",
+        "exhale 6s"
+      ],
+      "effect": "Directs breath to the tanden — center of force 3 fingers below the navel. Deep grounding, serenity, emotional stability.",
+      "timerSub": "Hara Breathing",
+      "origin": "Japan · Zen · Aikido",
+      "instructions": "Spine erect. Attention to the tanden — 3 fingers below the navel. Inhale expanding the abdomen like a bowl. Exhale slowly, letting the center gently draw inward.",
+      "roundsLabel": "cycles",
+      "defaultRounds": 10,
+      "doneSub": "The center is firm. The mind, still.",
+      "phases": [
+        {
+          "label": "Inhale — hara",
+          "duration": 4
+        },
+        {
+          "label": "Exhale — slow",
+          "duration": 6
+        }
+      ]
+    },
+    "chandrabhedana": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "India · Pranayama",
+      "name": "Chandra Bhedana",
+      "sub": "Piercing the Moon",
+      "pattern": [
+        "inhale left 4s",
+        "retention 4s",
+        "exhale right 8s"
+      ],
+      "effect": "Activates the lunar channel (ida nadi). Refreshes the body, calms the agitated mind. Antidote for anxiety and excessive internal heat.",
+      "timerSub": "Piercing the Moon",
+      "origin": "India · Pranayama",
+      "instructions": "Close the right nostril with the thumb. Inhale through the left nostril (lunar, feminine). Close the left with the ring finger, exhale through the right.",
+      "roundsLabel": "cycles",
+      "defaultRounds": 7,
+      "doneSub": "The moon calms. The system refreshes.",
+      "phases": [
+        {
+          "label": "Inhale — left",
+          "duration": 4
+        },
+        {
+          "label": "Retention",
+          "duration": 4
+        },
+        {
+          "label": "Exhale — right",
+          "duration": 8
+        }
+      ]
+    },
+    "nestor": {
+      "section": "calm",
+      "color": "earth",
+      "tag": "James Nestor · Breath",
+      "name": "5.5 Breathing",
+      "sub": "The ideal rhythm",
+      "pattern": [
+        "inhale 5.5s",
+        "exhale 5.5s"
+      ],
+      "effect": "The rhythm of 5.5 breaths per minute is identified by Nestor as ideal for humans — synchronizes heart, lungs and nervous system with maximum precision.",
+      "timerSub": "The ideal rhythm",
+      "origin": "James Nestor · Breath",
+      "instructions": "Inhale softly through the nose for 5.5 seconds, expanding the abdomen. Exhale softly through the nose for 5.5 seconds. Do not force — just flow. This is the rhythm science identifies as ideal for humans.",
+      "roundsLabel": "breaths (≈ 3 min)",
+      "defaultRounds": 16,
+      "doneSub": "The perfect rhythm. The body found its natural tempo.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 5.5
+        },
+        {
+          "label": "Exhale",
+          "duration": 5.5
+        }
+      ]
+    },
+    "coherent": {
+      "section": "calm",
+      "color": "earth",
+      "tag": "Coherent Breathing",
+      "name": "Cardiac Coherence",
+      "sub": "5 breaths per minute",
+      "pattern": [
+        "inhale 5s",
+        "exhale 5s"
+      ],
+      "effect": "The rhythm of 5–6 breaths per minute synchronizes heart, brain and respiratory system. Reduces anxiety, stabilizes mood. Can be done in any position.",
+      "timerSub": "5 breaths per minute",
+      "origin": "Coherent Breathing",
+      "instructions": "Inhale softly through the nose for 5 seconds. Exhale softly for 5 seconds. Do not force — just flow. The rhythm synchronizes heart, lungs and brain.",
+      "roundsLabel": "breaths (≈ 3 min)",
+      "defaultRounds": 18,
+      "doneSub": "Coherence restored. Heart and mind speak the same language.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 5
+        },
+        {
+          "label": "Exhale",
+          "duration": 5
+        }
+      ]
+    },
+    "478": {
+      "section": "calm",
+      "color": "earth",
+      "tag": "Dr. Andrew Weil",
+      "name": "4-7-8 Breathing",
+      "sub": "Nervous System Relaxer",
+      "pattern": [
+        "inhale 4s",
+        "retention 7s",
+        "exhale 8s"
+      ],
+      "effect": "The long retention and extended exhale activate the vagus nerve and parasympathetic system. Rapidly reduces cortisol. Excellent after waking tense or anxious.",
+      "timerSub": "Nervous System Relaxer",
+      "origin": "Dr. Andrew Weil",
+      "instructions": "Exhale all air. Inhale through the nose counting 4. Hold counting 7. Exhale completely through the mouth counting 8. The ratio is what matters.",
+      "roundsLabel": "cycles",
+      "defaultRounds": 6,
+      "doneSub": "The vagus nerve responds. Cortisol recedes.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 4
+        },
+        {
+          "label": "Retention",
+          "duration": 7
+        },
+        {
+          "label": "Exhale",
+          "duration": 8
+        }
+      ]
+    },
+    "anapana": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "India · Thailand · Vipassana",
+      "name": "Anapanasati",
+      "sub": "Mindfulness of breath",
+      "pattern": [
+        "inhale natural",
+        "exhale natural"
+      ],
+      "effect": "The technique taught by the Buddha: simply observe the natural breath, without control. The timer marks total time. Cultivates presence, non-attachment and equanimity.",
+      "timerSub": "Mindfulness of breath",
+      "origin": "India / Thailand · Vipassana",
+      "instructions": "Don't control anything. Just observe the air entering and leaving through the nostrils. When the mind wanders, gently return. The timer marks the time — the breath is yours.",
+      "roundsLabel": "cycles (approx.)",
+      "defaultRounds": 12,
+      "doneSub": "The breath is the teacher. The mind has learned to listen.",
+      "phases": [
+        {
+          "label": "Observe — inhale",
+          "duration": 4
+        },
+        {
+          "label": "Observe — exhale",
+          "duration": 5
+        }
+      ]
+    },
+    "sushumna": {
+      "section": "calm",
+      "color": "cool",
+      "tag": "India · Tantra · Pranayama",
+      "name": "Central Channel",
+      "sub": "Sushumna Kriya",
+      "pattern": [
+        "inhale 6s",
+        "retention 6s",
+        "exhale 6s"
+      ],
+      "effect": "Visualize energy rising up the spine as you inhale, resting at the crown during retention, and descending serenely on the exhale. Body-mind integration.",
+      "timerSub": "Sushumna Kriya",
+      "origin": "India · Tantra · Pranayama",
+      "instructions": "Visualize a channel of light along the spine. Inhale feeling energy rise from the base to the crown of the head. Retain at the apex. Exhale descending with serenity.",
+      "roundsLabel": "cycles",
+      "defaultRounds": 7,
+      "doneSub": "The central channel, illuminated. Body and mind, integrated.",
+      "phases": [
+        {
+          "label": "Inhale — rising",
+          "duration": 6
+        },
+        {
+          "label": "Retention — crown",
+          "duration": 6
+        },
+        {
+          "label": "Exhale — descending",
+          "duration": 6
+        }
+      ]
+    },
+    "kapalabhati": {
+      "section": "energize",
+      "color": "warm",
+      "tag": "India · Hatha Yoga",
+      "name": "Kapalabhati",
+      "sub": "Shining Skull",
+      "pattern": [
+        "exhale fast",
+        "inhale passive"
+      ],
+      "effect": "Rapid exhales through the nose. Awakens, cleanses, warms.",
+      "timerSub": "Shining Skull",
+      "origin": "India · Hatha Yoga",
+      "instructions": "Sit upright. Contract the abdomen to exhale forcefully through the nose. The inhale is passive and automatic. Keep the face relaxed.",
+      "roundsLabel": "breaths",
+      "defaultRounds": 30,
+      "doneSub": "The skull shines. Prana awakens.",
+      "phases": [
+        {
+          "label": "Exhale — force",
+          "duration": 0.5
+        },
+        {
+          "label": "Inhale — passive",
+          "duration": 0.5
+        }
+      ]
+    },
+    "bhastrika": {
+      "section": "energize",
+      "color": "warm",
+      "tag": "India · Hatha Yoga",
+      "name": "Bhastrika",
+      "sub": "Bellows",
+      "pattern": [
+        "inhale 2s",
+        "exhale 2s"
+      ],
+      "effect": "Forceful inhale and exhale. Activates the sympathetic nervous system.",
+      "timerSub": "Bellows",
+      "origin": "India · Hatha Yoga",
+      "instructions": "Inhale forcefully filling the chest, exhale forcefully emptying it. Vigorous and controlled rhythm. Pause 30s between rounds.",
+      "roundsLabel": "breaths",
+      "defaultRounds": 10,
+      "doneSub": "Energy activated. The body warms.",
+      "phases": [
+        {
+          "label": "Inhale",
+          "duration": 2
+        },
+        {
+          "label": "Exhale",
+          "duration": 2
+        }
+      ]
+    },
+    "ujjayi": {
+      "section": "energize",
+      "color": "warm",
+      "tag": "India · Ashtanga Yoga",
+      "name": "Ujjayi",
+      "sub": "Victorious · Oceanic",
+      "pattern": [
+        "inhale 4s",
+        "exhale 4s"
+      ],
+      "effect": "Breathing with oceanic sound. Focus, presence, internal warmth.",
+      "timerSub": "Victorious · Oceanic",
+      "origin": "India · Ashtanga Yoga",
+      "instructions": "Inhale through the nose gently contracting the glottis — oceanic sound. Exhale through the nose with the same soft sound. Feel the internal warmth expanding.",
+      "roundsLabel": "cycles",
+      "defaultRounds": 8,
+      "doneSub": "The inner ocean calms.",
+      "phases": [
+        {
+          "label": "Inhale (glottis)",
+          "duration": 4
+        },
+        {
+          "label": "Exhale (glottis)",
+          "duration": 4
+        }
+      ]
+    },
+    "suryabhedana": {
+      "section": "energize",
+      "color": "warm",
+      "tag": "India · Pranayama",
+      "name": "Surya Bhedana",
+      "sub": "Piercing the Sun",
+      "pattern": [
+        "inhale right 4s",
+        "exhale left 8s"
+      ],
+      "effect": "Right nostril only (solar). Energizes, warms, activates.",
+      "timerSub": "Piercing the Sun",
+      "origin": "India · Pranayama",
+      "instructions": "Close the left nostril with the ring finger. Inhale slowly through the right nostril. Close the right with the thumb, exhale through the left.",
+      "roundsLabel": "cycles",
+      "defaultRounds": 7,
+      "doneSub": "The inner sun has been activated.",
+      "phases": [
+        {
+          "label": "Inhale — right",
+          "duration": 4
+        },
+        {
+          "label": "Retention",
+          "duration": 4
+        },
+        {
+          "label": "Exhale — left",
+          "duration": 8
+        }
+      ]
+    },
+    "wimhof": {
+      "section": "wim",
+      "color": "wim",
+      "tag": "Netherlands · Wim Hof Method",
+      "name": "Wim Hof Breathing",
+      "sub": "Controlled hyperventilation + progressive retention",
+      "pattern": [
+        "30× deep inhale",
+        "retention — no air",
+        "recovery 15s"
+      ],
+      "effect": "30 deep rapid breaths, then exhale fully and hold — each round retention grows naturally. Activates the nervous system, increases stress tolerance.",
+      "timerSub": "Controlled hyperventilation + progressive retention",
+      "origin": "Netherlands · Wim Hof Method",
+      "instructions": "Lie down or sit comfortably. 30 deep rapid breaths, then exhale fully and hold. Press \"breathe in\" when you need to. 3 rounds with progressive goals.",
+      "roundsLabel": "rounds",
+      "defaultRounds": 3,
+      "doneSub": "Nervous system activated and reset. Clear mind.",
+      "roundChips": [
+        "Round 1 · goal 1 min",
+        "Round 2 · goal 1.5 min",
+        "Round 3 · goal 2 min"
+      ],
+      "isWim": true,
+      "breaths": 30,
+      "retGoals": [
+        60,
+        90,
+        120
+      ]
+    }
+  }
+}

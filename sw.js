@@ -1,8 +1,14 @@
-const CACHE = 'respiracao-v4';
+const CACHE = 'breathe-v1';
 const ASSETS = [
+  './index.html',
+  './Breathe.html',
   './respiracao.html',
   './manifest.json',
   './icon.png',
+  './icon-192.png',
+  './i18n/pt.json',
+  './i18n/en.json',
+  './i18n/fr.json',
   'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400&display=swap'
 ];
 
