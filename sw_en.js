@@ -1,9 +1,10 @@
-const CACHE = 'breathe-en-v2';
+const CACHE = 'breathe-en-v3';
 const ASSETS = [
   './Breathe.html',
   './manifest_en.json',
   './icon_en.png',
-  './icon_en_192.png'
+  './icon_en_192.png',
+  'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400&display=swap'
 ];
 
 self.addEventListener('install', e => {

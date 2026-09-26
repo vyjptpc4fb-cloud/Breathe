@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Breathe</title>
-<link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest_en.json">
 <meta name="theme-color" content="#f5f0e8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#13100c" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Breathe">
-<link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
-<link rel="apple-touch-icon" sizes="512x512" href="icon.png">
+<link rel="apple-touch-icon" sizes="192x192" href="icon_en_192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="icon_en.png">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -33,7 +33,7 @@
       --accent-warm: #d4834a;
       --accent-cool: #5a8a9a;
       --accent-earth: #7a8a5a;
-      --accent-wim: #9a6aaa;
+      --accent-wim: #a476b4;
       --paper: #1e1810;
     }
   }
@@ -366,7 +366,7 @@
   .rounds-num { display: flex; align-items: center; gap: 8px; }
 
   .rounds-btn {
-    width: 28px; height: 28px;
+    width: 40px; height: 40px;
     border: 1px solid rgba(42,32,22,0.2);
     background: transparent;
     cursor: pointer;
@@ -421,21 +421,41 @@
     .card-h { flex-direction: column; gap: 8px; }
     .wim-card-body { flex-direction: column; }
   }
+
+  .card:focus-visible,
+  .rounds-btn:focus-visible,
+  .btn:focus-visible,
+  .listen-btn:focus-visible,
+  #back-btn:focus-visible {
+    outline: 2px solid var(--accent-cool);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .card:hover { transform: none; }
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <span class="logo-char">息 呼 श्वास</span>
+  <span class="logo-char" aria-hidden="true">息 呼 श्वास</span>
   <h1>Breathing Practices</h1>
   <p class="subtitle">mornings, eastern traditions</p>
 </header>
 
+<main>
 <!-- QUADRADA E VARIAÇÕES -->
 <div class="section-label"><span class="effect-dot dot-cool"></span> box breathing · variations</div>
 <div class="cards-1">
 
-  <div class="card cool card-h" onclick="open_('taoist')">
+  <div class="card cool card-h" onclick="open_('taoist')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">China · Taoism · Qi Gong</div>
       <div class="card-name">Box Breathing 4-4-4-4</div>
@@ -449,7 +469,7 @@
     </div>
   </div>
 
-  <div class="card cool card-h" onclick="open_('quadrada6')">
+  <div class="card cool card-h" onclick="open_('quadrada6')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">China · Taoism · Qi Gong</div>
       <div class="card-name">Box Breathing 6-6-6-6</div>
@@ -463,7 +483,7 @@
     </div>
   </div>
 
-  <div class="card cool card-h" onclick="open_('quadrada8')">
+  <div class="card cool card-h" onclick="open_('quadrada8')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">China · Taoism · Qi Gong</div>
       <div class="card-name">Box Breathing 8-8-8-8</div>
@@ -477,7 +497,7 @@
     </div>
   </div>
 
-  <div class="card cool card-h" onclick="open_('quadrada10')">
+  <div class="card cool card-h" onclick="open_('quadrada10')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">China · Taoism · Qi Gong</div>
       <div class="card-name">Box Breathing 10-10-10-10</div>
@@ -497,7 +517,7 @@
 <div class="section-label" style="margin-top:10px"><span class="effect-dot dot-earth"></span> extended exhale · vagal activation</div>
 <div class="cards-1">
 
-  <div class="card earth card-h" onclick="open_('prolongada3')">
+  <div class="card earth card-h" onclick="open_('prolongada3')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">Universal · Grounding</div>
       <div class="card-name">Extended Exhale</div>
@@ -511,7 +531,7 @@
     </div>
   </div>
 
-  <div class="card earth card-h" onclick="open_('prolongada')">
+  <div class="card earth card-h" onclick="open_('prolongada')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">Universal · Grounding</div>
       <div class="card-name">Extended Exhale</div>
@@ -525,7 +545,7 @@
     </div>
   </div>
 
-  <div class="card earth card-h" onclick="open_('prolongada6')">
+  <div class="card earth card-h" onclick="open_('prolongada6')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">Universal · Grounding</div>
       <div class="card-name">Extended Exhale</div>
@@ -545,7 +565,7 @@
 <div class="section-label" style="margin-top:10px"><span class="effect-dot dot-warm"></span> voice · bel canto · vocal support</div>
 <div class="cards-1">
 
-  <div class="card card-h" onclick="open_('farinelli')">
+  <div class="card card-h" onclick="open_('farinelli')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">Europe · Bel Canto · 18th Century</div>
       <div class="card-name">Farinelli Breathing</div>
@@ -567,7 +587,7 @@
 <div class="section-label" style="margin-top:10px"><span class="effect-dot dot-warm"></span> voice · vocal pedagogy · Ju Franco</div>
 <div class="cards-1">
 
-  <div class="card card-h" onclick="open_('jufranco1')">
+  <div class="card card-h" onclick="open_('jufranco1')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">Vocal Pedagogy · Ju Franco</div>
       <div class="card-name">Exercise 1</div>
@@ -583,7 +603,7 @@
     </div>
   </div>
 
-  <div class="card card-h" onclick="open_('jufranco2')">
+  <div class="card card-h" onclick="open_('jufranco2')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">Vocal Pedagogy · Ju Franco</div>
       <div class="card-name">Exercise 2</div>
@@ -601,7 +621,7 @@
     </div>
   </div>
 
-  <div class="card card-h" onclick="open_('jufranco3')">
+  <div class="card card-h" onclick="open_('jufranco3')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">Vocal Pedagogy · Ju Franco</div>
       <div class="card-name">Exercise 3</div>
@@ -626,7 +646,7 @@
 <div class="section-label" style="margin-top:10px"><span class="effect-dot dot-cool"></span> calming · balance · grounding</div>
 <div class="cards-1">
 
-  <div class="card cool card-h" onclick="open_('bhramari')">
+  <div class="card cool card-h" onclick="open_('bhramari')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">India · Hatha Yoga · Pranayama</div>
       <div class="card-name">Bhramari</div>
@@ -640,7 +660,7 @@
     </div>
   </div>
 
-  <div class="card cool card-h" onclick="open_('nadishodhana')">
+  <div class="card cool card-h" onclick="open_('nadishodhana')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">India · Pranayama</div>
       <div class="card-name">Nadi Shodhana</div>
@@ -654,7 +674,7 @@
     </div>
   </div>
 
-  <div class="card cool card-h" onclick="open_('tanden')">
+  <div class="card cool card-h" onclick="open_('tanden')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">Japan · Zen · Aikido</div>
       <div class="card-name">Tanden Kokyu</div>
@@ -668,7 +688,7 @@
     </div>
   </div>
 
-  <div class="card cool card-h" onclick="open_('chandrabhedana')">
+  <div class="card cool card-h" onclick="open_('chandrabhedana')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">India · Pranayama</div>
       <div class="card-name">Chandra Bhedana</div>
@@ -682,7 +702,7 @@
     </div>
   </div>
 
-  <div class="card earth card-h" onclick="open_('nestor')">
+  <div class="card earth card-h" onclick="open_('nestor')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">James Nestor · Breath</div>
       <div class="card-name">5.5 Breathing</div>
@@ -696,7 +716,7 @@
     </div>
   </div>
 
-  <div class="card earth card-h" onclick="open_('coherent')">
+  <div class="card earth card-h" onclick="open_('coherent')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">Coherent Breathing</div>
       <div class="card-name">Cardiac Coherence</div>
@@ -710,7 +730,7 @@
     </div>
   </div>
 
-  <div class="card earth card-h" onclick="open_('478')">
+  <div class="card earth card-h" onclick="open_('478')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">Dr. Andrew Weil</div>
       <div class="card-name">4-7-8 Breathing</div>
@@ -724,7 +744,7 @@
     </div>
   </div>
 
-  <div class="card cool card-h" onclick="open_('anapana')">
+  <div class="card cool card-h" onclick="open_('anapana')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">Índia · Tailândia · Vipassana</div>
       <div class="card-name">Anapanasati</div>
@@ -738,7 +758,7 @@
     </div>
   </div>
 
-  <div class="card cool card-h" onclick="open_('sushumna')">
+  <div class="card cool card-h" onclick="open_('sushumna')" role="button" tabindex="0">
     <div class="card-left">
       <div class="card-tag">India · Tantra · Pranayama</div>
       <div class="card-name">Central Channel</div>
@@ -757,7 +777,7 @@
 <!-- WIM HOF -->
 <div class="section-label" style="margin-top:10px"><span class="effect-dot dot-wim"></span> wim hof method · progressive retention</div>
 <div class="cards-1">
-  <div class="card wim" onclick="open_('wimhof')">
+  <div class="card wim" onclick="open_('wimhof')" role="button" tabindex="0">
     <div class="card-tag">Netherlands · Wim Hof Method</div>
     <div class="card-name">Wim Hof Breathing</div>
     <div class="card-sub">Controlled hyperventilation + progressive retention</div>
@@ -782,7 +802,7 @@
 <!-- ENERGIZANTES -->
 <div class="section-label" style="margin-top:10px"><span class="effect-dot dot-warm"></span> energizing</div>
 <div class="cards-2">
-  <div class="card" onclick="open_('kapalabhati')">
+  <div class="card" onclick="open_('kapalabhati')" role="button" tabindex="0">
     <div class="card-tag">India · Hatha Yoga</div>
     <div class="card-name">Kapalabhati</div>
     <div class="card-sub">Shining Skull</div>
@@ -791,7 +811,7 @@
       <span class="phase-pill">expire rápido</span><span class="phase-pill">inspire passivo</span>
     </div>
   </div>
-  <div class="card" onclick="open_('bhastrika')">
+  <div class="card" onclick="open_('bhastrika')" role="button" tabindex="0">
     <div class="card-tag">India · Hatha Yoga</div>
     <div class="card-name">Bhastrika</div>
     <div class="card-sub">Bellows</div>
@@ -800,7 +820,7 @@
       <span class="phase-pill">inspire 2s</span><span class="phase-pill">expire 2s</span>
     </div>
   </div>
-  <div class="card" onclick="open_('ujjayi')">
+  <div class="card" onclick="open_('ujjayi')" role="button" tabindex="0">
     <div class="card-tag">India · Ashtanga Yoga</div>
     <div class="card-name">Ujjayi</div>
     <div class="card-sub">Victorious · Oceanic</div>
@@ -809,7 +829,7 @@
       <span class="phase-pill">inspire 4s</span><span class="phase-pill">expire 4s</span>
     </div>
   </div>
-  <div class="card" onclick="open_('suryabhedana')">
+  <div class="card" onclick="open_('suryabhedana')" role="button" tabindex="0">
     <div class="card-tag">India · Pranayama</div>
     <div class="card-name">Surya Bhedana</div>
     <div class="card-sub">Piercing the Sun</div>
@@ -820,12 +840,14 @@
   </div>
 </div>
 
+</main>
+
 <!-- TIMER OVERLAY -->
-<div id="timer-overlay">
+<div id="timer-overlay" role="dialog" aria-modal="true" aria-labelledby="t-name">
   <button id="back-btn" onclick="goBack()">← back</button>
 
   <div class="timer-origin" id="t-origin"></div>
-  <div class="timer-name"   id="t-name"></div>
+  <div class="timer-name"   id="t-name" tabindex="-1"></div>
   <div class="timer-sub"    id="t-sub"></div>
 
   <div id="wim-dots"></div>
@@ -846,8 +868,8 @@
         <circle id="progress-ring" cx="105" cy="105" r="95"/>
       </svg>
       <div class="circle-inner">
-        <div id="phase-label">—</div>
-        <div id="count-display">0</div>
+        <div id="phase-label" aria-live="polite" aria-atomic="true">—</div>
+        <div id="count-display" aria-hidden="true">0</div>
         <div id="unit-label">sec</div>
       </div>
     </div>
@@ -871,7 +893,7 @@
   </div>
 
   <div class="done-msg" id="done-msg">
-    <div class="done-char">🌿</div>
+    <div class="done-char" aria-hidden="true">🌿</div>
     <div class="done-text">Practice complete</div>
     <div class="done-sub" id="done-sub"></div>
     <div class="controls">
@@ -886,6 +908,24 @@ const CIRC = 2 * Math.PI * 95;
 const ring = document.getElementById('progress-ring');
 ring.style.strokeDasharray = CIRC;
 ring.style.strokeDashoffset = CIRC;
+
+// Keyboard activation for card grid (role="button" divs)
+document.addEventListener('keydown', (e) => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.card[role="button"]')) {
+    e.preventDefault();
+    e.target.click();
+  }
+});
+
+let lastFocused = null;
+document.addEventListener('click', (e) => {
+  const card = e.target.closest('.card[role="button"]');
+  if (card) lastFocused = card;
+});
+
+document.getElementById('timer-overlay').addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') goBack();
+});
 
 const COLORS = { warm:'#c4713a', cool:'#4a7a8a', earth:'#6a7a4a', wim:'#7a4a8a' };
 
@@ -979,20 +1019,7 @@ const P = {
       {label:'Inhale — level 5',duration:9},{label:'Suspend',duration:9},{label:'Exhale',duration:9},
       {label:'Inhale — level 6',duration:10},{label:'Suspend',duration:10},{label:'Exhale',duration:10},
     ],
-    defaultRounds:1, roundsLabel:'sequência completa', doneSub:'O appoggio está ativo. A coluna de ar, sustentada.',
-  },
-  farinelli: {
-    name:'Farinelli Breathing', sub:'Vocal support and sustain', origin:'Europe · Bel Canto · 18th Century', color:'warm',
-    instructions:'Six progressive levels from 5 to 10 counts, after Richard Miller (The Structure of Singing). Inhale — Suspend — Exhale, always symmetrical. At higher counts, the inhale happens in plateaus: micro-suspensions within the inhalation phase itself, without exhaling. This is Lamperti\'s thimble breathing. Active appoggio, no visible tension in neck or shoulders.',
-    phases:[
-      {label:'Inhale — level 1',duration:5},{label:'Suspend',duration:5},{label:'Exhale',duration:5},
-      {label:'Inhale — level 2',duration:6},{label:'Suspend',duration:6},{label:'Exhale',duration:6},
-      {label:'Inhale — level 3',duration:7},{label:'Suspend',duration:7},{label:'Exhale',duration:7},
-      {label:'Inhale — level 4',duration:8},{label:'Suspend',duration:8},{label:'Exhale',duration:8},
-      {label:'Inhale — level 5',duration:9},{label:'Suspend',duration:9},{label:'Exhale',duration:9},
-      {label:'Inhale — level 6',duration:10},{label:'Suspend',duration:10},{label:'Exhale',duration:10},
-    ],
-    defaultRounds:1, roundsLabel:'sequência completa', doneSub:'O appoggio está ativo. A coluna de ar, sustentada.',
+    defaultRounds:1, roundsLabel:'full sequence', doneSub:'The appoggio is active. The air column, sustained.',
   },
   jufranco1: {
     name:'Exercise 1', sub:'Inhale · airflow · release — 6 counts', origin:'Vocal Pedagogy · Ju Franco', color:'warm',
@@ -1171,6 +1198,7 @@ function open_(key){
   document.getElementById('timer-overlay').classList.add('active');
   document.getElementById('timer-main').style.display='';
   document.getElementById('done-msg').classList.remove('show');
+  document.getElementById('t-name').focus();
   resetTimer();
 }
 
@@ -1195,6 +1223,7 @@ function goBack(){
   window.speechSynthesis.cancel();
   releaseWakeLock();
   document.getElementById('timer-overlay').classList.remove('active');
+  if(lastFocused) lastFocused.focus();
 }
 
 function toggleTimer(){ running ? pauseT() : startT(); }
@@ -1302,7 +1331,16 @@ function showDone(){
 
 <script>
 if ('serviceWorker' in navigator) {
+  const hadController = !!navigator.serviceWorker.controller;
   window.addEventListener('load', () => { navigator.serviceWorker.register('sw_en.js').catch(() => {}); });
+  if (hadController) {
+    let reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (reloaded) return;
+      reloaded = true;
+      window.location.reload();
+    });
+  }
 }
 </script>
 </body>
