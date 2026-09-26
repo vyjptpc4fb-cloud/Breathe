@@ -1,8 +1,9 @@
 {
- "name": "Breathe",
+  "name": "Breathe",
   "short_name": "Breathe",
-  "description": "Práticas de respiração das tradições indiana, chinesa e japonesa",
-  "start_url": "./respiracao.html",
+  "description": "Breathing practices from Eastern traditions · Práticas de respiração das tradições orientais · Exercices de respiration issus des traditions orientales",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f5f0e8",
   "theme_color": "#f5f0e8",
